@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IWA Singapore — Indian Women's Association</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #E8670A;
+    --deep-crimson: #9B1B30;
+    --gold: #C9973A;
+    --turmeric: #F0A500;
+    --ivory: #FAF7F2;
+    --charcoal: #1C1C1E;
+    --warm-grey: #6B6460;
+    --light-sand: #F5EFE6;
+    --marigold: #F4A820;
+    --teal-dark: #0D5C63;
+    --border: rgba(200,155,58,0.25);
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: ‘DM Sans’, sans-serif;
+background: var(–ivory);
+color: var(–charcoal);
+overflow-x: hidden;
+}
+
+/* ─── DECORATIVE PATTERN ─── */
+.rangoli-bg {
+background-image:
+radial-gradient(circle at 20% 20%, rgba(232,103,10,0.06) 0%, transparent 50%),
+radial-gradient(circle at 80% 80%, rgba(155,27,48,0.06) 0%, transparent 50%),
+radial-gradient(circle at 50% 50%, rgba(201,151,58,0.04) 0%, transparent 70%);
+}
+
+/* ─── TOP BAR ─── */
+.topbar {
+background: var(–deep-crimson);
+color: rgba(255,255,255,0.85);
+font-size: 0.72rem;
+letter-spacing: 0.08em;
+text-align: center;
+padding: 8px 20px;
+font-weight: 500;
+}
+
+.topbar a { color: var(–marigold); text-decoration: none; }
+
+/* ─── NAVIGATION ─── */
+nav {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(250,247,242,0.97);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(–border);
+padding: 0 5vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 72px;
+}
+
+.nav-logo {
+display: flex;
+align-items: center;
+gap: 12px;
+text-decoration: none;
+}
+
+.nav-logo-emblem {
+width: 44px;
+height: 44px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(–saffron), var(–deep-crimson));
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.3rem;
+font-weight: 600;
+letter-spacing: 0.02em;
+flex-shrink: 0;
+}
+
+.nav-logo-text {
+display: flex;
+flex-direction: column;
+line-height: 1.1;
+}
+
+.nav-logo-text strong {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.05rem;
+font-weight: 600;
+color: var(–charcoal);
+letter-spacing: 0.03em;
+}
+
+.nav-logo-text span {
+font-size: 0.65rem;
+color: var(–warm-grey);
+letter-spacing: 0.12em;
+text-transform: uppercase;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 6px;
+list-style: none;
+}
+
+.nav-links a {
+font-size: 0.8rem;
+font-weight: 500;
+letter-spacing: 0.04em;
+color: var(–charcoal);
+text-decoration: none;
+padding: 6px 12px;
+border-radius: 4px;
+transition: all 0.2s;
+}
+
+.nav-links a:hover { color: var(–saffron); background: rgba(232,103,10,0.07); }
+
+.nav-cta {
+background: var(–deep-crimson) !important;
+color: white !important;
+padding: 8px 20px !important;
+border-radius: 4px !important;
+}
+
+.nav-cta:hover { background: var(–saffron) !important; }
+
+/* ─── HERO ─── */
+.hero {
+position: relative;
+min-height: 92vh;
+display: flex;
+align-items: center;
+overflow: hidden;
+background: var(–charcoal);
+}
+
+.hero-bg {
+position: absolute;
+inset: 0;
+background:
+linear-gradient(135deg, rgba(28,28,30,0.92) 0%, rgba(155,27,48,0.75) 50%, rgba(232,103,10,0.6) 100%);
+z-index: 1;
+}
+
+/* Decorative geometric overlay - rangoli inspired */
+.hero-pattern {
+position: absolute;
+inset: 0;
+z-index: 0;
+opacity: 0.07;
+background-image:
+repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(201,151,58,1) 40px, rgba(201,151,58,1) 41px),
+repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(201,151,58,1) 40px, rgba(201,151,58,1) 41px);
+}
+
+.hero-mandala {
+position: absolute;
+right: -100px;
+top: 50%;
+transform: translateY(-50%);
+width: 700px;
+height: 700px;
+opacity: 0.08;
+z-index: 1;
+animation: slowSpin 60s linear infinite;
+}
+
+@keyframes slowSpin { from { transform: translateY(-50%) rotate(0deg); } to { transform: translateY(-50%) rotate(360deg); } }
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 5vw;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: center;
+width: 100%;
+}
+
+.hero-tag {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: rgba(201,151,58,0.18);
+border: 1px solid rgba(201,151,58,0.4);
+color: var(–marigold);
+font-size: 0.7rem;
+font-weight: 600;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+padding: 6px 14px;
+border-radius: 2px;
+margin-bottom: 24px;
+animation: fadeUp 0.8s ease both;
+}
+
+.hero-tag::before {
+content: ‘’;
+width: 20px;
+height: 1px;
+background: var(–marigold);
+}
+
+.hero-headline {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(3rem, 5vw, 4.8rem);
+font-weight: 300;
+line-height: 1.08;
+color: white;
+margin-bottom: 28px;
+animation: fadeUp 0.9s ease 0.1s both;
+}
+
+.hero-headline em {
+font-style: italic;
+color: var(–marigold);
+}
+
+.hero-tagline {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.25rem;
+color: rgba(255,255,255,0.7);
+font-weight: 300;
+font-style: italic;
+margin-bottom: 40px;
+animation: fadeUp 1s ease 0.2s both;
+letter-spacing: 0.03em;
+}
+
+.hero-pillars {
+display: flex;
+gap: 24px;
+margin-bottom: 44px;
+animation: fadeUp 1s ease 0.3s both;
+}
+
+.pillar {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+}
+
+.pillar-icon {
+font-size: 1.4rem;
+margin-bottom: 2px;
+}
+
+.pillar-label {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.1rem;
+font-weight: 600;
+color: var(–marigold);
+letter-spacing: 0.05em;
+}
+
+.pillar-sub {
+font-size: 0.7rem;
+color: rgba(255,255,255,0.5);
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+
+.hero-actions {
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+animation: fadeUp 1s ease 0.4s both;
+}
+
+.btn-primary {
+background: var(–saffron);
+color: white;
+font-size: 0.82rem;
+font-weight: 600;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+padding: 14px 32px;
+border: none;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+transition: all 0.25s;
+clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+}
+
+.btn-primary:hover { background: var(–deep-crimson); transform: translateY(-2px); }
+
+.btn-outline {
+background: transparent;
+color: white;
+font-size: 0.82rem;
+font-weight: 500;
+letter-spacing: 0.08em;
+padding: 13px 32px;
+border: 1px solid rgba(255,255,255,0.4);
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+transition: all 0.25s;
+}
+
+.btn-outline:hover { border-color: var(–marigold); color: var(–marigold); }
+
+/* Hero right panel — stats */
+.hero-stats {
+animation: fadeUp 1s ease 0.5s both;
+}
+
+.stats-card {
+background: rgba(255,255,255,0.06);
+border: 1px solid rgba(201,151,58,0.2);
+border-radius: 2px;
+padding: 36px;
+backdrop-filter: blur(10px);
+}
+
+.stats-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.85rem;
+color: var(–marigold);
+letter-spacing: 0.15em;
+text-transform: uppercase;
+margin-bottom: 28px;
+padding-bottom: 12px;
+border-bottom: 1px solid rgba(201,151,58,0.2);
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 28px;
+margin-bottom: 28px;
+}
+
+.stat-item {}
+.stat-number {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 2.8rem;
+font-weight: 300;
+color: white;
+line-height: 1;
+margin-bottom: 4px;
+}
+.stat-number span { color: var(–marigold); }
+.stat-desc { font-size: 0.72rem; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+
+.upcoming-events-mini {
+border-top: 1px solid rgba(201,151,58,0.15);
+padding-top: 20px;
+}
+
+.event-mini {
+display: flex;
+gap: 14px;
+align-items: flex-start;
+padding: 10px 0;
+border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.event-mini:last-child { border-bottom: none; }
+
+.event-date-badge {
+background: var(–saffron);
+color: white;
+min-width: 36px;
+text-align: center;
+padding: 4px 6px;
+border-radius: 2px;
+flex-shrink: 0;
+}
+
+.event-date-badge .day { font-size: 1rem; font-weight: 700; line-height: 1; font-family: ‘Cormorant Garamond’, serif; }
+.event-date-badge .mon { font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.9; }
+
+.event-info {}
+.event-name { font-size: 0.78rem; color: white; font-weight: 500; line-height: 1.3; margin-bottom: 2px; }
+.event-loc { font-size: 0.68rem; color: rgba(255,255,255,0.45); }
+
+@keyframes fadeUp {
+from { opacity: 0; transform: translateY(24px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTION BASE ─── */
+section { padding: 96px 5vw; }
+
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-header {
+text-align: center;
+margin-bottom: 64px;
+}
+
+.section-eyebrow {
+font-size: 0.72rem;
+font-weight: 600;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–saffron);
+margin-bottom: 12px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+content: ‘’;
+width: 40px;
+height: 1px;
+background: var(–gold);
+opacity: 0.5;
+}
+
+.section-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+font-weight: 300;
+color: var(–charcoal);
+line-height: 1.15;
+margin-bottom: 16px;
+}
+
+.section-title em { font-style: italic; color: var(–deep-crimson); }
+
+.section-desc {
+font-size: 1rem;
+color: var(–warm-grey);
+max-width: 600px;
+margin: 0 auto;
+line-height: 1.7;
+}
+
+/* ─── VISION BAND ─── */
+.vision-band {
+background: linear-gradient(135deg, var(–charcoal) 0%, #2A1518 100%);
+padding: 72px 5vw;
+position: relative;
+overflow: hidden;
+}
+
+.vision-band::before {
+content: ‘’;
+position: absolute;
+top: -60px;
+right: -60px;
+width: 400px;
+height: 400px;
+border-radius: 50%;
+background: radial-gradient(circle, rgba(232,103,10,0.12), transparent 70%);
+}
+
+.vision-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 2px 1fr 2px 1fr;
+gap: 0;
+align-items: start;
+}
+
+.vision-divider {
+background: linear-gradient(to bottom, transparent, rgba(201,151,58,0.4), transparent);
+height: 120px;
+align-self: center;
+}
+
+.vision-block { padding: 0 40px; text-align: center; }
+
+.vision-icon {
+font-size: 2.2rem;
+margin-bottom: 16px;
+display: block;
+filter: grayscale(0);
+}
+
+.vision-word {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.8rem;
+font-weight: 600;
+color: var(–marigold);
+letter-spacing: 0.08em;
+margin-bottom: 10px;
+}
+
+.vision-desc {
+font-size: 0.82rem;
+color: rgba(255,255,255,0.55);
+line-height: 1.65;
+}
+
+/* ─── ABOUT STRIP ─── */
+.about-section {
+background: var(–ivory);
+}
+
+.about-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 80px;
+align-items: center;
+}
+
+.about-visual {
+position: relative;
+}
+
+.about-img-frame {
+width: 100%;
+aspect-ratio: 4/5;
+background: linear-gradient(160deg, var(–light-sand), var(–saffron) 30%, var(–deep-crimson) 80%);
+border-radius: 2px;
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.about-img-placeholder {
+text-align: center;
+color: rgba(255,255,255,0.6);
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.2rem;
+font-style: italic;
+padding: 40px;
+}
+
+.about-accent-box {
+position: absolute;
+bottom: -24px;
+right: -24px;
+background: var(–charcoal);
+color: white;
+padding: 24px 28px;
+font-family: ‘Cormorant Garamond’, serif;
+text-align: center;
+}
+
+.about-accent-box .num {
+font-size: 2.4rem;
+font-weight: 300;
+color: var(–marigold);
+line-height: 1;
+display: block;
+}
+
+.about-accent-box .lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; }
+
+.about-eyebrow {
+font-size: 0.7rem;
+font-weight: 600;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–saffron);
+margin-bottom: 16px;
+}
+
+.about-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 2.8rem;
+font-weight: 300;
+line-height: 1.12;
+margin-bottom: 24px;
+color: var(–charcoal);
+}
+
+.about-title em { color: var(–deep-crimson); font-style: italic; }
+
+.about-body {
+font-size: 0.95rem;
+color: var(–warm-grey);
+line-height: 1.75;
+margin-bottom: 20px;
+}
+
+.about-objectives {
+list-style: none;
+margin: 24px 0 36px;
+}
+
+.about-objectives li {
+font-size: 0.87rem;
+color: var(–charcoal);
+padding: 10px 0;
+border-bottom: 1px solid var(–border);
+display: flex;
+gap: 12px;
+align-items: flex-start;
+line-height: 1.5;
+}
+
+.about-objectives li::before {
+content: ‘✦’;
+color: var(–gold);
+font-size: 0.6rem;
+margin-top: 4px;
+flex-shrink: 0;
+}
+
+/* ─── CLUBS GRID ─── */
+.clubs-section { background: var(–light-sand); }
+
+.clubs-grid {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 1px;
+background: var(–border);
+border: 1px solid var(–border);
+margin-top: 8px;
+}
+
+.club-card {
+background: var(–ivory);
+padding: 28px 20px;
+text-align: center;
+transition: all 0.25s;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+}
+
+.club-card::after {
+content: ‘’;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+height: 3px;
+background: linear-gradient(90deg, var(–saffron), var(–deep-crimson));
+transform: scaleX(0);
+transition: transform 0.3s ease;
+}
+
+.club-card:hover { background: white; transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); z-index: 2; }
+.club-card:hover::after { transform: scaleX(1); }
+
+.club-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.club-name { font-size: 0.78rem; font-weight: 600; color: var(–charcoal); letter-spacing: 0.02em; line-height: 1.3; }
+
+/* ─── I-CARE ─── */
+.icare-section { background: white; }
+
+.icare-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2px;
+background: var(–border);
+}
+
+.icare-card {
+background: var(–ivory);
+padding: 40px 32px;
+transition: background 0.3s;
+position: relative;
+}
+
+.icare-card:hover { background: white; }
+
+.icare-num {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 4rem;
+font-weight: 300;
+color: var(–border);
+line-height: 1;
+position: absolute;
+top: 20px;
+right: 24px;
+}
+
+.icare-org {
+display: inline-block;
+background: var(–light-sand);
+color: var(–saffron);
+font-size: 0.65rem;
+font-weight: 700;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+padding: 4px 10px;
+margin-bottom: 14px;
+}
+
+.icare-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.4rem;
+font-weight: 600;
+margin-bottom: 10px;
+color: var(–charcoal);
+}
+
+.icare-desc {
+font-size: 0.82rem;
+color: var(–warm-grey);
+line-height: 1.65;
+}
+
+/* ─── EVENTS ─── */
+.events-section { background: var(–charcoal); }
+
+.events-section .section-eyebrow { color: var(–marigold); }
+.events-section .section-title { color: white; }
+.events-section .section-desc { color: rgba(255,255,255,0.5); }
+
+.events-list {
+display: flex;
+flex-direction: column;
+gap: 2px;
+background: rgba(255,255,255,0.05);
+}
+
+.event-row {
+background: rgba(255,255,255,0.03);
+display: grid;
+grid-template-columns: 90px 1fr auto;
+gap: 24px;
+align-items: center;
+padding: 24px 32px;
+transition: background 0.2s;
+border-left: 3px solid transparent;
+cursor: pointer;
+}
+
+.event-row:hover {
+background: rgba(232,103,10,0.08);
+border-left-color: var(–saffron);
+}
+
+.event-row-date {
+text-align: center;
+}
+
+.event-row-day { font-family: ‘Cormorant Garamond’, serif; font-size: 2.4rem; font-weight: 300; color: white; line-height: 1; }
+.event-row-month { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(–marigold); }
+
+.event-row-info {}
+.event-row-name { font-size: 1rem; font-weight: 500; color: white; margin-bottom: 4px; }
+.event-row-meta { font-size: 0.76rem; color: rgba(255,255,255,0.4); }
+
+.event-row-tag {
+font-size: 0.65rem;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+padding: 5px 12px;
+background: rgba(255,255,255,0.06);
+color: rgba(255,255,255,0.4);
+white-space: nowrap;
+}
+
+.view-all-link {
+display: flex;
+align-items: center;
+gap: 8px;
+color: var(–marigold);
+text-decoration: none;
+font-size: 0.82rem;
+font-weight: 600;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+margin-top: 32px;
+transition: gap 0.2s;
+}
+
+.view-all-link:hover { gap: 14px; }
+
+/* ─── MEMBERSHIP ─── */
+.membership-section { background: var(–ivory); }
+
+.membership-cards {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2px;
+background: var(–border);
+}
+
+.mem-card {
+background: var(–ivory);
+padding: 52px 48px;
+position: relative;
+overflow: hidden;
+}
+
+.mem-card.featured {
+background: linear-gradient(160deg, var(–charcoal) 0%, #2A1518 100%);
+}
+
+.mem-card-tag {
+font-size: 0.65rem;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+padding: 5px 12px;
+display: inline-block;
+margin-bottom: 20px;
+background: var(–light-sand);
+color: var(–saffron);
+}
+
+.mem-card.featured .mem-card-tag {
+background: rgba(232,103,10,0.2);
+color: var(–marigold);
+}
+
+.mem-title {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 2rem;
+font-weight: 300;
+margin-bottom: 16px;
+color: var(–charcoal);
+line-height: 1.15;
+}
+
+.mem-card.featured .mem-title { color: white; }
+
+.mem-desc {
+font-size: 0.88rem;
+color: var(–warm-grey);
+line-height: 1.7;
+margin-bottom: 32px;
+}
+
+.mem-card.featured .mem-desc { color: rgba(255,255,255,0.55); }
+
+.mem-features {
+list-style: none;
+margin-bottom: 36px;
+}
+
+.mem-features li {
+font-size: 0.85rem;
+padding: 9px 0;
+border-bottom: 1px solid var(–border);
+display: flex;
+gap: 10px;
+color: var(–charcoal);
+}
+
+.mem-card.featured .mem-features li {
+color: rgba(255,255,255,0.7);
+border-bottom-color: rgba(255,255,255,0.06);
+}
+
+.mem-features li::before { content: ‘✓’; color: var(–saffron); font-weight: 700; }
+
+/* ─── FOOTER ─── */
+footer {
+background: #111;
+color: rgba(255,255,255,0.6);
+padding: 72px 5vw 32px;
+}
+
+.footer-inner {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer-grid {
+display: grid;
+grid-template-columns: 2fr 1fr 1fr 1fr;
+gap: 48px;
+padding-bottom: 48px;
+border-bottom: 1px solid rgba(255,255,255,0.08);
+margin-bottom: 32px;
+}
+
+.footer-brand {}
+.footer-brand .logo-text {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.4rem;
+color: white;
+font-weight: 400;
+margin-bottom: 12px;
+display: block;
+}
+
+.footer-brand p {
+font-size: 0.82rem;
+line-height: 1.7;
+margin-bottom: 20px;
+}
+
+.social-links { display: flex; gap: 12px; }
+.social-link {
+width: 34px;
+height: 34px;
+border: 1px solid rgba(255,255,255,0.15);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.75rem;
+color: rgba(255,255,255,0.5);
+text-decoration: none;
+transition: all 0.2s;
+border-radius: 2px;
+}
+
+.social-link:hover { border-color: var(–marigold); color: var(–marigold); }
+
+.footer-col h4 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1rem;
+font-weight: 600;
+color: white;
+margin-bottom: 16px;
+letter-spacing: 0.04em;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a {
+font-size: 0.8rem;
+color: rgba(255,255,255,0.45);
+text-decoration: none;
+transition: color 0.2s;
+}
+.footer-col a:hover { color: var(–marigold); }
+
+.footer-bottom {
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 0.72rem;
+color: rgba(255,255,255,0.25);
+}
+
+/* ─── BAZAAR BANNER ─── */
+.bazaar-banner {
+background: linear-gradient(135deg, var(–saffron) 0%, var(–deep-crimson) 60%, #5C1520 100%);
+padding: 60px 5vw;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.bazaar-banner::before {
+content: ‘✦ ✦ ✦’;
+position: absolute;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+color: rgba(255,255,255,0.15);
+font-size: 0.7rem;
+letter-spacing: 1em;
+}
+
+.bazaar-banner h2 {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: clamp(1.8rem, 3vw, 2.8rem);
+font-weight: 300;
+color: white;
+margin-bottom: 8px;
+}
+
+.bazaar-banner p {
+color: rgba(255,255,255,0.75);
+font-size: 0.9rem;
+margin-bottom: 28px;
+}
+
+.btn-white {
+background: white;
+color: var(–deep-crimson);
+font-size: 0.82rem;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+padding: 14px 36px;
+border: none;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+transition: all 0.25s;
+}
+
+.btn-white:hover { background: var(–marigold); color: white; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+.hero-content { grid-template-columns: 1fr; }
+.hero-stats { display: none; }
+.vision-inner { grid-template-columns: 1fr; }
+.vision-divider { display: none; }
+.about-grid { grid-template-columns: 1fr; }
+.clubs-grid { grid-template-columns: repeat(3, 1fr); }
+.icare-grid { grid-template-columns: 1fr; }
+.membership-cards { grid-template-columns: 1fr; }
+.footer-grid { grid-template-columns: 1fr 1fr; }
+nav .nav-links { display: none; }
+}
+
+/* Scroll reveal */
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+opacity: 1;
+transform: none;
+}
+</style>
+
+</head>
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+  Celebrating Indian women in Singapore — <a href="#">IWA Summer Bazaar 2026 now open for registrations →</a>
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-emblem">IWA</div>
+    <div class="nav-logo-text">
+      <strong>Indian Women's Association</strong>
+      <span>Singapore · Est. 1990</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">About</a></li>
+    <li><a href="#">Events</a></li>
+    <li><a href="#">Clubs</a></li>
+    <li><a href="#">I-Care</a></li>
+    <li><a href="#">Bazaar</a></li>
+    <li><a href="#">IWApreneurs</a></li>
+    <li><a href="#">Privileges</a></li>
+    <li><a href="#" class="nav-cta">Join IWA</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-bg"></div>
+
+  <!-- Mandala SVG decoration -->
+
+  <svg class="hero-mandala" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="200" cy="200" r="195" stroke="white" stroke-width="1"/>
+    <circle cx="200" cy="200" r="155" stroke="white" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="100" stroke="white" stroke-width="1"/>
+    <circle cx="200" cy="200" r="60" stroke="white" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="20" stroke="white" stroke-width="1"/>
+    <line x1="200" y1="5" x2="200" y2="395" stroke="white" stroke-width="0.5"/>
+    <line x1="5" y1="200" x2="395" y2="200" stroke="white" stroke-width="0.5"/>
+    <line x1="62" y1="62" x2="338" y2="338" stroke="white" stroke-width="0.5"/>
+    <line x1="338" y1="62" x2="62" y2="338" stroke="white" stroke-width="0.5"/>
+    <line x1="200" y1="5" x2="338" y2="62" stroke="white" stroke-width="0.3"/>
+    <line x1="338" y1="62" x2="395" y2="200" stroke="white" stroke-width="0.3"/>
+    <line x1="395" y1="200" x2="338" y2="338" stroke="white" stroke-width="0.3"/>
+    <line x1="338" y1="338" x2="200" y2="395" stroke="white" stroke-width="0.3"/>
+    <line x1="200" y1="395" x2="62" y2="338" stroke="white" stroke-width="0.3"/>
+    <line x1="62" y1="338" x2="5" y2="200" stroke="white" stroke-width="0.3"/>
+    <line x1="5" y1="200" x2="62" y2="62" stroke="white" stroke-width="0.3"/>
+    <line x1="62" y1="62" x2="200" y2="5" stroke="white" stroke-width="0.3"/>
+    <polygon points="200,45 215,80 200,70 185,80" fill="white" opacity="0.5"/>
+    <polygon points="200,355 215,320 200,330 185,320" fill="white" opacity="0.5"/>
+    <polygon points="45,200 80,185 70,200 80,215" fill="white" opacity="0.5"/>
+    <polygon points="355,200 320,215 330,200 320,185" fill="white" opacity="0.5"/>
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">Singapore's Premier Indian Women's Community</div>
+      <h1 class="hero-headline">
+        Care.<br><em>Connect.</em><br>Celebrate.
+      </h1>
+      <p class="hero-tagline">
+        Empowering Indian women in Singapore through culture,<br>community, and compassion since 1990.
+      </p>
+      <div class="hero-pillars">
+        <div class="pillar">
+          <span class="pillar-icon">🤝</span>
+          <span class="pillar-label">Care</span>
+          <span class="pillar-sub">I-Care Programs</span>
+        </div>
+        <div class="pillar" style="border-left: 1px solid rgba(255,255,255,0.15); padding-left: 24px; margin-left: 8px;">
+          <span class="pillar-icon">🌐</span>
+          <span class="pillar-label">Connect</span>
+          <span class="pillar-sub">15 Interest Clubs</span>
+        </div>
+        <div class="pillar" style="border-left: 1px solid rgba(255,255,255,0.15); padding-left: 24px; margin-left: 8px;">
+          <span class="pillar-icon">✨</span>
+          <span class="pillar-label">Celebrate</span>
+          <span class="pillar-sub">Signature Events</span>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary">Join IWA Today</a>
+        <a href="#" class="btn-outline">Explore Events</a>
+      </div>
+    </div>
+
+```
+<div class="hero-stats">
+  <div class="stats-card">
+    <div class="stats-title">IWA at a Glance</div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">35<span>+</span></div>
+        <div class="stat-desc">Years of Impact</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15</div>
+        <div class="stat-desc">Interest Clubs</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">6<span>+</span></div>
+        <div class="stat-desc">I-Care Partners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-desc">Scholarships</div>
+      </div>
+    </div>
+    <div class="upcoming-events-mini">
+      <div style="font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:12px;">Upcoming Events</div>
+      <div class="event-mini">
+        <div class="event-date-badge">
+          <div class="day">18</div>
+          <div class="mon">Mar</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">SWAMI Home Birthday Celebrations</div>
+          <div class="event-loc">Sembawang Walk, Singapore</div>
+        </div>
+      </div>
+      <div class="event-mini">
+        <div class="event-date-badge" style="background: var(--deep-crimson);">
+          <div class="day">19</div>
+          <div class="mon">Mar</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Music Club — Rangon Mein Surmayi Jung</div>
+          <div class="event-loc">Seafront on Meyer</div>
+        </div>
+      </div>
+      <div class="event-mini">
+        <div class="event-date-badge" style="background: var(--teal-dark);">
+          <div class="day">23</div>
+          <div class="mon">Mar</div>
+        </div>
+        <div class="event-info">
+          <div class="event-name">Health & Fitness — Tai Chi Workshop</div>
+          <div class="event-loc">ITE College West</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- VISION BAND -->
+
+<div class="vision-band">
+  <div class="vision-inner">
+    <div class="vision-block">
+      <span class="vision-icon">🤲</span>
+      <div class="vision-word">Care</div>
+      <div class="vision-desc">We give back through meaningful volunteering with HOME, TWC2, BSS, SWAMI Home and more — nurturing the spirit of compassion.</div>
+    </div>
+    <div class="vision-divider"></div>
+    <div class="vision-block">
+      <span class="vision-icon">🌸</span>
+      <div class="vision-word">Connect</div>
+      <div class="vision-desc">15 vibrant interest clubs bring together women of diverse backgrounds, interests, and talents for lasting friendships and networks.</div>
+    </div>
+    <div class="vision-divider"></div>
+    <div class="vision-block">
+      <span class="vision-icon">🎊</span>
+      <div class="vision-word">Celebrate</div>
+      <div class="vision-desc">From our annual Bazaar to cultural festivities and IWApreneurs showcases — we honor the rich tapestry of Indian heritage.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid reveal">
+      <div class="about-visual">
+        <div class="about-img-frame">
+          <div class="about-img-placeholder">
+            <p style="font-size:3rem; margin-bottom:12px;">🪷</p>
+            <p>A community of<br>extraordinary women</p>
+          </div>
+        </div>
+        <div class="about-accent-box">
+          <span class="num">1990</span>
+          <span class="lbl">Est. in Singapore</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="about-eyebrow">Who We Are</div>
+        <h2 class="about-title">
+          A home away<br>from <em>home</em>,<br>in Singapore.
+        </h2>
+        <p class="about-body">
+          The Indian Women's Association (IWA) Singapore is a non-profit Voluntary Welfare Organization that brings together women of Indian origin — and women married into the Indian community — living in Singapore.
+        </p>
+        <p class="about-body">
+          Managed entirely by a volunteer executive committee, IWA provides a warm, inclusive platform for social, cultural, educational, and philanthropic engagement.
+        </p>
+        <ul class="about-objectives">
+          <li>Assist newcomers of Indian origin in settling into Singapore life</li>
+          <li>Foster friendship and cross-cultural understanding</li>
+          <li>Empower women through education, workshops, and enterprise</li>
+          <li>Nurture volunteering and community service</li>
+          <li>Create a sustainable network for social integration</li>
+        </ul>
+        <a href="#" class="btn-primary">Our History & Mission</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLUBS -->
+
+<section class="clubs-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Interest Groups</div>
+      <h2 class="section-title">Find your <em>people</em></h2>
+      <p class="section-desc">15 vibrant clubs spanning arts, culture, wellness, food, travel and entrepreneurship — there's a home for every passion.</p>
+    </div>
+    <div class="clubs-grid reveal">
+      <div class="club-card"><div class="club-icon">💛</div><div class="club-name">Acts of Kindness (AOK)</div></div>
+      <div class="club-card"><div class="club-icon">☕</div><div class="club-name">Adda Club</div></div>
+      <div class="club-card"><div class="club-icon">📚</div><div class="club-name">Book Club</div></div>
+      <div class="club-card"><div class="club-icon">🎨</div><div class="club-name">Creative Hands Club</div></div>
+      <div class="club-card"><div class="club-icon">💼</div><div class="club-name">Entrepreneur Club</div></div>
+      <div class="club-card"><div class="club-icon">👨‍👩‍👧</div><div class="club-name">Family Club</div></div>
+      <div class="club-card"><div class="club-icon">🎲</div><div class="club-name">Games Club</div></div>
+      <div class="club-card"><div class="club-icon">🍜</div><div class="club-name">Gourmet Goddess Club</div></div>
+      <div class="club-card"><div class="club-icon">🧘</div><div class="club-name">Health & Fitness Club</div></div>
+      <div class="club-card"><div class="club-icon">🎬</div><div class="club-name">Movie Club</div></div>
+      <div class="club-card"><div class="club-icon">🎵</div><div class="club-name">Music Club</div></div>
+      <div class="club-card"><div class="club-icon">🎭</div><div class="club-name">Performing Arts Club</div></div>
+      <div class="club-card"><div class="club-icon">🧵</div><div class="club-name">TexStyle Club</div></div>
+      <div class="club-card"><div class="club-icon">✈️</div><div class="club-name">Travel Club</div></div>
+      <div class="club-card"><div class="club-icon">✍️</div><div class="club-name">Writing Enthusiasts' Club</div></div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="#" class="btn-primary">Explore All Clubs</a>
+    </div>
+  </div>
+</section>
+
+<!-- I-CARE -->
+
+<section class="icare-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Community Service</div>
+      <h2 class="section-title">I-Care: <em>Giving back</em></h2>
+      <p class="section-desc">IWA's I-Care initiative partners with leading welfare organisations to make a tangible difference in the lives of those who need it most.</p>
+    </div>
+    <div class="icare-grid reveal">
+      <div class="icare-card">
+        <div class="icare-num">01</div>
+        <div class="icare-org">BSS</div>
+        <div class="icare-title">Babes Pregnancy Crisis Support</div>
+        <div class="icare-desc">Supporting women facing pregnancy crises through counselling, material aid, and compassionate care.</div>
+      </div>
+      <div class="icare-card">
+        <div class="icare-num">02</div>
+        <div class="icare-org">HOME</div>
+        <div class="icare-title">Humanitarian Organisation for Migration Economics</div>
+        <div class="icare-desc">Grocery drives and welfare support for migrant workers and foreign domestic helpers in Singapore.</div>
+      </div>
+      <div class="icare-card">
+        <div class="icare-num">03</div>
+        <div class="icare-org">TWC2</div>
+        <div class="icare-title">Transient Workers Count Too</div>
+        <div class="icare-desc">Championing fair treatment and rights of low-wage migrant workers through advocacy and direct support.</div>
+      </div>
+      <div class="icare-card">
+        <div class="icare-num">04</div>
+        <div class="icare-org">SWAMI</div>
+        <div class="icare-title">SWAMI Home for the Elderly</div>
+        <div class="icare-desc">Bringing joy to elderly residents through regular visits, celebrations, and personal connection.</div>
+      </div>
+      <div class="icare-card">
+        <div class="icare-num">05</div>
+        <div class="icare-org">SMU</div>
+        <div class="icare-title">IWA Vidya Scholarship</div>
+        <div class="icare-desc">Annual scholarship supporting deserving students at Singapore Management University with their education.</div>
+      </div>
+      <div class="icare-card">
+        <div class="icare-num">06</div>
+        <div class="icare-org">SUTD</div>
+        <div class="icare-title">Gyan Jyoti Study Award</div>
+        <div class="icare-desc">Illuminating futures — the IWA SUTD award empowers driven students in technology and design.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+
+<section class="events-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">What's On</div>
+      <h2 class="section-title" style="color:white;">Upcoming <em style="color:var(--marigold);">Events</em></h2>
+      <p class="section-desc">Stay connected with our calendar of cultural, social, and community events.</p>
+    </div>
+    <div class="events-list reveal">
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">18</div>
+          <div class="event-row-month">March 2026</div>
+        </div>
+        <div class="event-row-info">
+          <div class="event-row-name">IWA SWAMI Home — Birthday Celebrations</div>
+          <div class="event-row-meta">🕑 2:30 PM · SWAMI Home, 5 Sembawang Walk, S757717</div>
+        </div>
+        <div class="event-row-tag">I-Care</div>
+      </div>
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">19</div>
+          <div class="event-row-month">March 2026</div>
+        </div>
+        <div class="event-row-info">
+          <div class="event-row-name">Music Club — "Rangon Mein Surmayi Jung"</div>
+          <div class="event-row-meta">🕑 11:00 AM · Function Room, Seafront on Meyer</div>
+        </div>
+        <div class="event-row-tag">Music Club</div>
+      </div>
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">20</div>
+          <div class="event-row-month">March 2026</div>
+        </div>
+        <div class="event-row-info">
+          <div class="event-row-name">Travel Club — Geylang Serai Market Tour</div>
+          <div class="event-row-meta">🕑 10:00 AM · 1 Geylang Serai Road, S402001</div>
+        </div>
+        <div class="event-row-tag">Travel Club</div>
+      </div>
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">23</div>
+          <div class="event-row-month">March 2026</div>
+        </div>
+        <div class="event-row-info">
+          <div class="event-row-name">Health & Fitness Club — Tai Chi Workshop</div>
+          <div class="event-row-meta">🕑 11:00 AM · Evolution Fitness, ITE College West</div>
+        </div>
+        <div class="event-row-tag">Fitness</div>
+      </div>
+      <div class="event-row">
+        <div class="event-row-date">
+          <div class="event-row-day">18</div>
+          <div class="event-row-month">April 2026</div>
+        </div>
+        <div class="event-row-info">
+          <div class="event-row-name">Travel Club — Trip to Bintan</div>
+          <div class="event-row-meta">🕑 8:00 AM · Tanah Merah Ferry Terminal</div>
+        </div>
+        <div class="event-row-tag">Travel Club</div>
+      </div>
+    </div>
+    <a href="#" class="view-all-link">View Full Events Calendar <span>→</span></a>
+  </div>
+</section>
+
+<!-- BAZAAR BANNER -->
+
+<div class="bazaar-banner">
+  <h2>IWA Summer Bazaar 2026</h2>
+  <p>Registration open for vendors and shoppers — be part of Singapore's favourite Indian lifestyle showcase.</p>
+  <a href="#" class="btn-white">Register Now</a>
+</div>
+
+<!-- MEMBERSHIP -->
+
+<section class="membership-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Join Us</div>
+      <h2 class="section-title">Become an <em>IWA Member</em></h2>
+      <p class="section-desc">Open to all women of Indian origin, or married to men of Indian origin, residing in Singapore.</p>
+    </div>
+    <div class="membership-cards reveal">
+      <div class="mem-card">
+        <div class="mem-card-tag">Regular Membership</div>
+        <h3 class="mem-title">For Indian Women<br>in Singapore</h3>
+        <p class="mem-desc">Full membership open to women of Indian origin or married to men of Indian origin, residing in Singapore.</p>
+        <ul class="mem-features">
+          <li>Access to all 15 Interest Clubs</li>
+          <li>Invitations to signature IWA events</li>
+          <li>Member privileges & partner discounts</li>
+          <li>I-Care volunteering opportunities</li>
+          <li>Weekly e-Newsletter updates</li>
+        </ul>
+        <a href="#" class="btn-primary">Apply for Membership</a>
+      </div>
+      <div class="mem-card featured">
+        <div class="mem-card-tag">Associate Membership</div>
+        <h3 class="mem-title">Open to All<br>Women in Singapore</h3>
+        <p class="mem-desc">IWA recently launched Associate Membership, welcoming all women residing in Singapore to join our vibrant community.</p>
+        <ul class="mem-features">
+          <li>Access to Interest Club events</li>
+          <li>Community networking & social events</li>
+          <li>Participation in I-Care programs</li>
+          <li>Bazaar shopping privileges</li>
+          <li>Weekly e-Newsletter updates</li>
+        </ul>
+        <a href="#" class="btn-primary">Apply as Associate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-text">Indian Women's Association Singapore</span>
+        <p>A non-profit Voluntary Welfare Organization connecting, empowering, and celebrating Indian women in Singapore since 1990. Built on the values of Care, Connect, and Celebrate.</p>
+        <div class="social-links">
+          <a href="http://www.facebook.com/iwasingapore" class="social-link" target="_blank">f</a>
+          <a href="https://www.instagram.com/iwasingapore/" class="social-link" target="_blank">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>About IWA</h4>
+        <ul>
+          <li><a href="#">Our History</a></li>
+          <li><a href="#">Constitution</a></li>
+          <li><a href="#">IWA Committee</a></li>
+          <li><a href="#">Executive Reports</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Join IWA</a></li>
+          <li><a href="#">Clubs & Interest Groups</a></li>
+          <li><a href="#">I-Care Programs</a></li>
+          <li><a href="#">Volunteer With Us</a></li>
+          <li><a href="#">Advertise With Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Events & More</h4>
+        <ul>
+          <li><a href="#">Events Calendar</a></li>
+          <li><a href="#">Summer Bazaar 2026</a></li>
+          <li><a href="#">IWApreneurs</a></li>
+          <li><a href="#">Member Privileges</a></li>
+          <li><a href="#">IWA Dhwani Archive</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Indian Women's Association Singapore · 31 Cantonment Road, Singapore 089747</span>
+      <span>media@iwasingapore.org · Member of SCWO</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(r => observer.observe(r));
+
+  // Stagger club cards reveal
+  document.querySelectorAll('.club-card').forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.04}s`;
+  });
+</script>
+
+</body>
+</html>
