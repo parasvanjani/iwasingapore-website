@@ -225,6 +225,69 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
   .modal-hdr { padding:28px 24px 20px; }
   .modal-notice { padding:12px 24px; }
 }
+
+/* ── SPA PAGE SYSTEM ── */
+.page { display:none; }
+.page.active { display:block; }
+.nav-links a.nav-active { color:#E8670A; background:rgba(232,103,10,0.07); }
+/* About page styles */
+.about-page { background:#FAF7F2; min-height:80vh; }
+.page-hero { background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%); padding:80px 5vw 64px; }
+.page-hero-inner { max-width:1200px; margin:0 auto; }
+.page-breadcrumb { font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:16px; }
+.page-breadcrumb span { color:#F4A820; }
+.page-hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2.8rem,5vw,4.5rem); font-weight:300; color:white; line-height:1.05; margin-bottom:12px; }
+.page-hero-title em { color:#F4A820; font-style:italic; }
+.page-hero-sub { font-size:1rem; color:rgba(255,255,255,0.55); max-width:560px; line-height:1.7; }
+.about-tabs { background:white; border-bottom:1px solid rgba(200,155,58,0.25); position:sticky; top:72px; z-index:90; }
+.about-tabs-inner { max-width:1200px; margin:0 auto; padding:0 5vw; display:flex; gap:0; }
+.about-tab { font-size:0.8rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#6B6460; padding:18px 24px; cursor:pointer; border-bottom:3px solid transparent; transition:all 0.2s; text-decoration:none; display:block; }
+.about-tab:hover { color:#E8670A; }
+.about-tab.active { color:#E8670A; border-bottom-color:#E8670A; }
+.about-content { max-width:1200px; margin:0 auto; padding:72px 5vw; }
+.about-sub { display:none; }
+.about-sub.active { display:block; }
+/* Overview sub-page */
+.overview-grid { display:grid; grid-template-columns:3fr 2fr; gap:72px; align-items:start; }
+.overview-body { font-size:0.97rem; color:#6B6460; line-height:1.8; }
+.overview-body p { margin-bottom:20px; }
+.vision-card { background:linear-gradient(160deg,#1C1C1E 0%,#2A1518 100%); padding:40px; }
+.vision-card-title { font-family:'Cormorant Garamond',serif; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:#F4A820; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid rgba(201,151,58,0.2); }
+.vision-item { margin-bottom:24px; }
+.vision-item-label { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:#F4A820; margin-bottom:6px; }
+.vision-item-text { font-size:0.82rem; color:rgba(255,255,255,0.55); line-height:1.6; }
+.obj-list { list-style:none; margin-top:32px; }
+.obj-list li { display:flex; gap:16px; padding:16px 0; border-bottom:1px solid rgba(200,155,58,0.2); font-size:0.9rem; color:#1C1C1E; line-height:1.5; align-items:flex-start; }
+.obj-num { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; color:rgba(200,155,58,0.35); line-height:1; min-width:32px; }
+/* History sub-page */
+.history-layout { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+.history-body { font-size:0.97rem; color:#6B6460; line-height:1.8; }
+.history-body p { margin-bottom:20px; }
+.history-body h3 { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:#1C1C1E; margin-bottom:16px; margin-top:36px; }
+.history-timeline { position:relative; padding-left:24px; border-left:2px solid rgba(200,155,58,0.3); }
+.tl-item { position:relative; padding-bottom:28px; }
+.tl-item::before { content:''; position:absolute; left:-30px; top:6px; width:10px; height:10px; border-radius:50%; background:#E8670A; }
+.tl-year { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:#E8670A; margin-bottom:4px; }
+.tl-text { font-size:0.85rem; color:#6B6460; line-height:1.6; }
+.presidents-table { width:100%; border-collapse:collapse; margin-top:16px; }
+.presidents-table th { font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#6B6460; padding:12px 16px; text-align:left; border-bottom:2px solid rgba(200,155,58,0.3); }
+.presidents-table td { font-size:0.88rem; padding:11px 16px; border-bottom:1px solid rgba(200,155,58,0.15); color:#1C1C1E; }
+.presidents-table tr:nth-child(even) td { background:#F5EFE6; }
+.presidents-table tr.current td { background:rgba(232,103,10,0.06); font-weight:600; }
+.presidents-table tr.current td:first-child { border-left:3px solid #E8670A; }
+/* Contact sub-page */
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+.contact-card { background:white; padding:36px; border:1px solid rgba(200,155,58,0.2); }
+.contact-card-icon { font-size:2rem; margin-bottom:12px; }
+.contact-card-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:#1C1C1E; margin-bottom:8px; }
+.contact-card-desc { font-size:0.85rem; color:#6B6460; line-height:1.6; margin-bottom:16px; }
+.contact-card-email { display:inline-flex; align-items:center; gap:8px; color:#E8670A; font-size:0.85rem; font-weight:600; text-decoration:none; transition:gap 0.2s; }
+.contact-card-email:hover { gap:12px; }
+.contact-address { background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%); padding:40px; grid-column:1/-1; display:grid; grid-template-columns:1fr 1fr 1fr; gap:32px; }
+.addr-item-label { font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:#F4A820; margin-bottom:8px; }
+.addr-item-value { font-size:0.9rem; color:white; line-height:1.6; }
+.addr-item-value a { color:rgba(255,255,255,0.7); text-decoration:none; }
+
 </style>
 </head>
 <body>
@@ -235,17 +298,18 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
     <div class="nav-logo-text"><strong>Indian Women's Association</strong><span>Singapore &middot; Est. 1990</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="https://www.iwasingapore.org/About-IWA">About</a></li>
-    <li><a href="https://www.iwasingapore.org/IWA-Events">Events</a></li>
-    <li><a href="https://www.iwasingapore.org/IWA-Clubs">Clubs</a></li>
-    <li><a href="https://www.iwasingapore.org/IWA-I-Care">I-Care</a></li>
-    <li><a href="https://www.iwasingapore.org/IWA-Bazaar">Bazaar</a></li>
-    <li><a href="https://www.iwasingapore.org/IWApreneurs">IWApreneurs</a></li>
-    <li><a href="https://www.iwasingapore.org/IWA-Privileges">Privileges</a></li>
-    <li><a href="https://www.iwasingapore.org/IWA-Membership">Membership</a></li>
+    <li><a href="#" id="nav-about" onclick="goTo('about');return false;">About</a></li>
+    <li><a href="#" id="nav-events" onclick="goTo('events');return false;">Events</a></li>
+    <li><a href="#" id="nav-clubs" onclick="goTo('clubs');return false;">Clubs</a></li>
+    <li><a href="#" id="nav-icare" onclick="goTo('icare');return false;">I-Care</a></li>
+    <li><a href="#" id="nav-bazaar" onclick="goTo('bazaar');return false;">Bazaar</a></li>
+    <li><a href="#" id="nav-iwapreneurs" onclick="goTo('iwapreneurs');return false;">IWApreneurs</a></li>
+    <li><a href="#" id="nav-privileges" onclick="goTo('privileges');return false;">Privileges</a></li>
+    <li><a href="#" id="nav-membership" onclick="goTo('membership');return false;">Membership</a></li>
     <li><a href="#" class="nav-cta" onclick="openModal();return false;">Join IWA</a></li>
   </ul>
 </nav>
+<div id="home-content">
 <section class="hero">
   <div class="hero-grid"></div><div class="hero-bg"></div>
   <svg class="hero-mandala" viewBox="0 0 400 400" fill="none"><circle cx="200" cy="200" r="195" stroke="white" stroke-width="1"/><circle cx="200" cy="200" r="155" stroke="white" stroke-width="0.5"/><circle cx="200" cy="200" r="100" stroke="white" stroke-width="1"/><circle cx="200" cy="200" r="60" stroke="white" stroke-width="0.5"/><circle cx="200" cy="200" r="20" stroke="white" stroke-width="1"/><line x1="200" y1="5" x2="200" y2="395" stroke="white" stroke-width="0.5"/><line x1="5" y1="200" x2="395" y2="200" stroke="white" stroke-width="0.5"/><line x1="62" y1="62" x2="338" y2="338" stroke="white" stroke-width="0.5"/><line x1="338" y1="62" x2="62" y2="338" stroke="white" stroke-width="0.5"/><line x1="200" y1="5" x2="338" y2="62" stroke="white" stroke-width="0.3"/><line x1="338" y1="62" x2="395" y2="200" stroke="white" stroke-width="0.3"/><line x1="395" y1="200" x2="338" y2="338" stroke="white" stroke-width="0.3"/><line x1="338" y1="338" x2="200" y2="395" stroke="white" stroke-width="0.3"/><line x1="200" y1="395" x2="62" y2="338" stroke="white" stroke-width="0.3"/><line x1="62" y1="338" x2="5" y2="200" stroke="white" stroke-width="0.3"/><line x1="5" y1="200" x2="62" y2="62" stroke="white" stroke-width="0.3"/><line x1="62" y1="62" x2="200" y2="5" stroke="white" stroke-width="0.3"/></svg>
@@ -410,7 +474,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
         <a href="#" class="btn-primary" onclick="openModal('associate');return false;">Apply as Associate</a>
       </div>
     </div>
-    <div style="text-align:center;margin-top:28px"><p style="font-size:0.82rem;color:#6B6460">Questions? Read the <a href="https://www.iwasingapore.org/FAQMember" target="_blank" style="color:#E8670A">Membership FAQ</a> or email <a href="mailto:membership@iwasingapore.org" style="color:#E8670A">membership@iwasingapore.org</a></p></div>
+    <div style="text-align:center;margin-top:28px"><p style="font-size:0.82rem;color:#6B6460">Questions? Read the <a href="https://www.iwasingapore.org/FAQMember" target="_blank" style="color:#E8670A">Membership FAQ</a> or email <a href="/cdn-cgi/l/email-protection#6f020a020d0a1d1c07061f2f06180e1c0601080e1f001d0a41001d08" style="color:#E8670A"><span class="__cf_email__" data-cfemail="c4a9a1a9a6a1b6b7acadb484adb3a5b7adaaa3a5b4abb6a1eaabb6a3">[email&#160;protected]</span></a></p></div>
   </div>
 </section>
 <footer>
@@ -450,10 +514,243 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
     </div>
     <div class="ft-bottom">
       <span>&copy; 2026 Indian Women's Association Singapore &middot; P.O. Box 472, Orchard Post Office, Singapore 912316</span>
-      <span><a href="mailto:media@iwasingapore.org" style="color:rgba(255,255,255,0.25);text-decoration:none">media@iwasingapore.org</a> &middot; Member of SCWO</span>
+      <span><a href="/cdn-cgi/l/email-protection#8ee3ebeae7efcee7f9effde7e0e9effee1fceba0e1fce9" style="color:rgba(255,255,255,0.25);text-decoration:none"><span class="__cf_email__" data-cfemail="503d353439311039273123393e3731203f22357e3f2237">[email&#160;protected]</span></a> &middot; Member of SCWO</span>
     </div>
   </div>
 </footer>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PAGE: HOME (the existing hero + sections) -->
+<div id="page-home" class="page active"></div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PAGE: ABOUT IWA -->
+<div id="page-about" class="page about-page">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">Home &rsaquo; <span>About IWA</span></div>
+      <h1 class="page-hero-title">About <em>IWA</em></h1>
+      <p class="page-hero-sub">The Indian Women's Association Singapore &mdash; connecting, empowering, and celebrating Indian women since 1997.</p>
+    </div>
+  </div>
+  <div class="about-tabs">
+    <div class="about-tabs-inner">
+      <a class="about-tab active" id="tab-overview" onclick="showAboutTab('overview');return false;" href="#">Overview</a>
+      <a class="about-tab" id="tab-history" onclick="showAboutTab('history');return false;" href="#">History</a>
+      <a class="about-tab" id="tab-presidents" onclick="showAboutTab('presidents');return false;" href="#">Past Presidents</a>
+      <a class="about-tab" id="tab-contact" onclick="showAboutTab('contact');return false;" href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="about-content">
+    <div class="about-sub active" id="sub-overview">
+      <div class="overview-grid">
+        <div>
+          <div class="about-ey">Who We Are</div>
+          <h2 class="about-title" style="margin-bottom:24px">A community built on<br><em>Care, Connect &amp; Celebrate</em></h2>
+          <div class="overview-body">
+            <p>The Indian Women's Association (IWA) Singapore is a non-profit organization functioning as a Voluntary Welfare Organization (VWO) through its elected committee and volunteer member base.</p>
+            <p>IWA comprises a large exclusive member body representative of both the expatriate as well as the local Indian community in Singapore. The Association provides a platform for women to connect, support, and network with each other whilst living in Singapore.</p>
+            <p>Through IWA, members participate in social, cultural, educational and philanthropic activities. IWA's mission is not only to present a cultural platform, but also to provide a networking interface to its working members.</p>
+            <p>Membership is open to all women of Indian origin, or married to men of Indian origin, residing in Singapore. An Associate Membership also welcomes all other women residing in Singapore.</p>
+          </div>
+          <ul class="obj-list">
+            <li><span class="obj-num">01</span><span>Provide assistance and support in settling in Singapore by creating new initiatives to reach out to newcomers of Indian origin.</span></li>
+            <li><span class="obj-num">02</span><span>Encourage and foster friendship and understanding within the large growing community of Indians in Singapore.</span></li>
+            <li><span class="obj-num">03</span><span>Assist in orientation and adaptation of new citizens to Singaporean society and bring about better cross-cultural understanding.</span></li>
+            <li><span class="obj-num">04</span><span>Inculcate communication within the community and with other organizations.</span></li>
+            <li><span class="obj-num">05</span><span>Facilitate a platform for empowering women through education, workshops, events and activities that promote women's wellbeing, talents and enterprise.</span></li>
+            <li><span class="obj-num">06</span><span>Nurture and develop the spirit of volunteering and community service to make a positive and long-term impact in the community.</span></li>
+            <li><span class="obj-num">07</span><span>Create a sustainable, active network for effective social integration efforts across Singapore.</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="vision-card">
+            <div class="vision-card-title">IWA Vision &amp; Mission</div>
+            <div class="vision-item">
+              <div class="vision-item-label">🤲 Care</div>
+              <div class="vision-item-text">Connect with the community at large in Singapore through I-Care volunteer programs, serving the elderly, women, children and migrant workers.</div>
+            </div>
+            <div class="vision-item">
+              <div class="vision-item-label">🌸 Connect</div>
+              <div class="vision-item-text">Bring women from different walks of life together through 15 special interest clubs, signature events, and a vibrant member community.</div>
+            </div>
+            <div class="vision-item">
+              <div class="vision-item-label">🎊 Celebrate</div>
+              <div class="vision-item-text">Identify and celebrate the talents of Indian women in Singapore — providing a platform to showcase creativity, enterprise, and culture.</div>
+            </div>
+            <hr style="border:none;border-top:1px solid rgba(201,151,58,0.2);margin:24px 0">
+            <div style="font-size:0.78rem;color:rgba(255,255,255,0.4);line-height:1.6">
+              <strong style="color:#F4A820">Current President:</strong><br>Vidya Dasgupta (2025&ndash;2026)<br><br>
+              <strong style="color:#F4A820">Registered Address:</strong><br>P.O. Box 472, Orchard Post Office<br>Singapore 912316
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:24px;background:#F5EFE6;border-left:3px solid #C9973A">
+            <div style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#E8670A;margin-bottom:8px">Member of</div>
+            <div style="font-size:0.95rem;font-weight:600;color:#1C1C1E">Singapore Council of Women's Organisations (SCWO)</div>
+            <div style="font-size:0.82rem;color:#6B6460;margin-top:4px">IWA is a proud member organisation of SCWO, Singapore's leading women's platform.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HISTORY -->
+    <div class="about-sub" id="sub-history">
+      <div class="history-layout">
+        <div>
+          <div class="about-ey">Our Journey</div>
+          <h2 class="about-title" style="margin-bottom:24px">From a small club<br>to a <em>thriving community</em></h2>
+          <div class="history-body">
+            <p>IWA was launched as the <strong>Expatriate Indian Women's Club</strong> on September 20, 1997 &mdash; coincidentally India's 50th year of independence. This newly formed social non-profit organization's mission was to provide a "home away from home."</p>
+            <p>It was earmarked as a support network and a link to India's rich culture, through the promotion and import of exclusively Indian events such as plays, music, art, fashion, and dance performances.</p>
+            <p>The Indian Women's Association was formally established in 1998 as a social and cultural club, providing women arriving in Singapore with a connect. IWA's activities centered around celebrating the festivals of India and bringing in artisans and luminaries of Indian culture and sports.</p>
+            <p>Originally launched as an expats group under the patronage of the High Commission of India, it was then called <strong>Expat Indian Women's Association (EIWA)</strong>. The charter was subsequently changed to include all Indian women residing in Singapore, and the name was updated to <strong>Indian Women's Association Singapore</strong> to reflect this wider scope.</p>
+            <p>Membership was opened to women of Indian origin and women married to Indian men. Today, it has further opened its membership to all women who are interested in its programs and clubs through the <strong>Associate Membership</strong>.</p>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:#1C1C1E;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(200,155,58,0.3)">Key Milestones</div>
+          <div class="history-timeline">
+            <div class="tl-item"><div class="tl-year">1997</div><div class="tl-text">Founded as Expatriate Indian Women's Club on 20 September, India's 50th Independence anniversary, under the patronage of the High Commission of India.</div></div>
+            <div class="tl-item"><div class="tl-year">1998</div><div class="tl-text">Formally established as Indian Women's Association Singapore. First President: Julie Mehta.</div></div>
+            <div class="tl-item"><div class="tl-year">Early 2000s</div><div class="tl-text">Expanded from expat-only to all women of Indian origin residing in Singapore. Name changed from EIWA to IWA Singapore.</div></div>
+            <div class="tl-item"><div class="tl-year">2010s</div><div class="tl-text">Grew to 300+ members. Established I-Care partnerships with HOME, TWC2, BSS and SWAMI Home. Launched bi-annual Bazaars.</div></div>
+            <div class="tl-item"><div class="tl-year">2020s</div><div class="tl-text">Launched Associate Membership, opening IWA to all women in Singapore regardless of origin. Established SMU Vidya Scholarship and SUTD Gyan Jyoti Study Award.</div></div>
+            <div class="tl-item"><div class="tl-year">2025&ndash;27</div><div class="tl-text">Current committee under President Vidya Dasgupta continuing IWA's mission of Care, Connect and Celebrate across Singapore.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAST PRESIDENTS -->
+    <div class="about-sub" id="sub-presidents">
+      <div style="max-width:700px">
+        <div class="about-ey">Leadership Legacy</div>
+        <h2 class="about-title" style="margin-bottom:8px">Past <em>Presidents</em></h2>
+        <p style="font-size:0.95rem;color:#6B6460;line-height:1.7;margin-bottom:40px">IWA has been shaped by extraordinary volunteer leaders since 1997. Each president has carried forward the vision of Care, Connect and Celebrate.</p>
+        <table class="presidents-table">
+          <thead><tr><th>Year</th><th>President</th></tr></thead>
+          <tbody>
+            <tr class="current"><td>2026</td><td>Vidya Dasgupta</td></tr>
+            <tr class="current"><td>2025</td><td>Vidya Dasgupta</td></tr>
+            <tr><td>2024</td><td>Gauri Savadi</td></tr>
+            <tr><td>2023</td><td>Gauri Savadi</td></tr>
+            <tr><td>2022</td><td>Selme Singh / Madhu Suri</td></tr>
+            <tr><td>2021</td><td>Selme Singh</td></tr>
+            <tr><td>2020</td><td>Anuradha Shroff</td></tr>
+            <tr><td>2019</td><td>Anuradha Shroff</td></tr>
+            <tr><td>2018</td><td>Garima Lalwani / Chandan Lehal</td></tr>
+            <tr><td>2017</td><td>Garima Lalwani</td></tr>
+            <tr><td>2016</td><td>Sukanya Pushkarna</td></tr>
+            <tr><td>2015</td><td>Sukanya Pushkarna</td></tr>
+            <tr><td>2014</td><td>Piu Lahiri</td></tr>
+            <tr><td>2013</td><td>Piu Lahiri</td></tr>
+            <tr><td>2012</td><td>Subina Khaneja</td></tr>
+            <tr><td>2011</td><td>Subina Khaneja</td></tr>
+            <tr><td>2010</td><td>Shalini Sinha</td></tr>
+            <tr><td>2009</td><td>Shalini Sinha</td></tr>
+            <tr><td>2008</td><td>Shalini Sinha</td></tr>
+            <tr><td>2007</td><td>Binifer Kaushal</td></tr>
+            <tr><td>2006</td><td>Vanitha Narasimhan</td></tr>
+            <tr><td>2005</td><td>Nandini Gupta / Vanitha Narasimhan</td></tr>
+            <tr><td>2004</td><td>Pinky Pant</td></tr>
+            <tr><td>2003</td><td>Radhika Kothari</td></tr>
+            <tr><td>2002</td><td>Bina Batlivala</td></tr>
+            <tr><td>2001</td><td>Lata Iyer</td></tr>
+            <tr><td>2000</td><td>Lubna Jumabhouy</td></tr>
+            <tr><td>1999</td><td>Lata Iyer</td></tr>
+            <tr><td>1998</td><td>Julie Mehta</td></tr>
+            <tr><td>1997</td><td>Julie Mehta</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="about-sub" id="sub-contact">
+      <div class="about-ey">Get in Touch</div>
+      <h2 class="about-title" style="margin-bottom:8px">Contact <em>IWA</em></h2>
+      <p style="font-size:0.95rem;color:#6B6460;line-height:1.7;margin-bottom:48px">Please contact IWA by email at the relevant address below. We aim to respond within 3&ndash;5 working days.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-card-icon">✉️</div>
+          <div class="contact-card-title">General Enquiries</div>
+          <div class="contact-card-desc">For general questions about IWA, our events, or activities.</div>
+          <a href="mailto:secretary@iwasingapore.org" class="contact-card-email">secretary@iwasingapore.org &rarr;</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">🎟️</div>
+          <div class="contact-card-title">Membership</div>
+          <div class="contact-card-desc">For queries related to applying, renewing, or managing your IWA membership.</div>
+          <a href="mailto:membership@iwasingapore.org" class="contact-card-email">membership@iwasingapore.org &rarr;</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">🛍️</div>
+          <div class="contact-card-title">Bazaar</div>
+          <div class="contact-card-desc">For queries related to the IWA Summer or Festive Bazaar — vendor registration, logistics, and more.</div>
+          <a href="mailto:bazaar@iwasingapore.org" class="contact-card-email">bazaar@iwasingapore.org &rarr;</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">📣</div>
+          <div class="contact-card-title">Advertising &amp; Privileges</div>
+          <div class="contact-card-desc">For advertising on IWA media channels or to enquire about Privilege Partnerships.</div>
+          <a href="mailto:adsales@iwasingapore.org" class="contact-card-email">adsales@iwasingapore.org &rarr;</a><br><br>
+          <a href="mailto:privilege@iwasingapore.org" class="contact-card-email">privilege@iwasingapore.org &rarr;</a>
+        </div>
+        <div class="contact-address">
+          <div>
+            <div class="addr-item-label">Mailing Address</div>
+            <div class="addr-item-value">P.O. Box 472<br>Orchard Post Office<br>Singapore 912316</div>
+          </div>
+          <div>
+            <div class="addr-item-label">Media &amp; Press</div>
+            <div class="addr-item-value"><a href="mailto:media@iwasingapore.org">media@iwasingapore.org</a></div>
+          </div>
+          <div>
+            <div class="addr-item-label">Social Media</div>
+            <div class="addr-item-value">
+              <a href="http://www.facebook.com/iwasingapore" target="_blank">Facebook: /iwasingapore</a><br>
+              <a href="https://www.instagram.com/iwasingapore/" target="_blank">Instagram: @iwasingapore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PLACEHOLDER PAGES (to be built next) -->
+<div id="page-events" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Events</span></div><h1 class="page-hero-title"><em>Events</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full events page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Events" target="_blank" class="btn-primary">View Events on Current Site &rarr;</a></div>
+</div>
+<div id="page-clubs" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Clubs</span></div><h1 class="page-hero-title"><em>Clubs</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full clubs page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Clubs" target="_blank" class="btn-primary">View Clubs on Current Site &rarr;</a></div>
+</div>
+<div id="page-icare" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>I-Care</span></div><h1 class="page-hero-title"><em>I-Care</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full I-Care page coming soon.</p><a href="https://www.iwasingapore.org/IWA-I-Care" target="_blank" class="btn-primary">View I-Care on Current Site &rarr;</a></div>
+</div>
+<div id="page-bazaar" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Bazaar</span></div><h1 class="page-hero-title"><em>Bazaar</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full Bazaar page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Bazaar" target="_blank" class="btn-primary">View Bazaar on Current Site &rarr;</a></div>
+</div>
+<div id="page-iwapreneurs" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>IWApreneurs</span></div><h1 class="page-hero-title"><em>IWApreneurs</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full IWApreneurs page coming soon.</p><a href="https://www.iwasingapore.org/IWApreneurs" target="_blank" class="btn-primary">View IWApreneurs on Current Site &rarr;</a></div>
+</div>
+<div id="page-privileges" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Privileges</span></div><h1 class="page-hero-title"><em>Privileges</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full Privileges page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Privileges" target="_blank" class="btn-primary">View Privileges on Current Site &rarr;</a></div>
+</div>
+<div id="page-membership" class="page about-page">
+  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Membership</span></div><h1 class="page-hero-title"><em>Membership</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
+  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Use the Join IWA button to apply.</p><a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA &rarr;</a></div>
+</div>
+
 <!-- MEMBERSHIP MODAL -->
 <div id="modal" class="modal-ov" onclick="if(event.target===this)closeModal()">
   <div class="modal-box">
@@ -581,12 +878,12 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
       <div class="pay-info" id="pi-paynow">Transfer SGD $120 via PayNow to UEN <strong>S97SS0085J</strong> (Indian Women's Association Singapore). Please include your <strong>full name</strong> as the payment reference so we can match your payment.</div>
       <div class="pay-info" id="pi-cheque">Make cheque payable to <strong>Indian Women's Association</strong> and mail to: <strong>P.O. Box 472, Orchard Post Office, Singapore 912316</strong>. Write your name, email, phone and membership type on the back.</div>
       <button class="fsub" onclick="doSubmit()">Submit Application &rarr;</button>
-      <p class="fnote">Cash not accepted &middot; Fees non-refundable &amp; non-transferable &middot; Fee same regardless of month joined<br>Questions? Email <a href="mailto:membership@iwasingapore.org">membership@iwasingapore.org</a></p>
+      <p class="fnote">Cash not accepted &middot; Fees non-refundable &amp; non-transferable &middot; Fee same regardless of month joined<br>Questions? Email <a href="/cdn-cgi/l/email-protection#365b535b545344455e5f46765f4157455f5851574659445318594451"><span class="__cf_email__" data-cfemail="503d353d323522233839201039273123393e3731203f22357e3f2237">[email&#160;protected]</span></a></p>
     </div>
     <div class="success" id="mf-success">
       <div class="success-icon">🪷</div>
       <h3>Application Received!</h3>
-      <p>Thank you for applying to join IWA Singapore.<br><br>You will receive a confirmation email shortly. Membership activated within <strong>1 week</strong> for PayPal/PayNow, or after cheque encashment (~4 weeks).<br><br>Questions? Email <a href="mailto:membership@iwasingapore.org" style="color:#E8670A">membership@iwasingapore.org</a></p>
+      <p>Thank you for applying to join IWA Singapore.<br><br>You will receive a confirmation email shortly. Membership activated within <strong>1 week</strong> for PayPal/PayNow, or after cheque encashment (~4 weeks).<br><br>Questions? Email <a href="/cdn-cgi/l/email-protection#9ef3fbf3fcfbecedf6f7eedef7e9ffedf7f0f9ffeef1ecfbb0f1ecf9" style="color:#E8670A"><span class="__cf_email__" data-cfemail="b0ddd5ddd2d5c2c3d8d9c0f0d9c7d1c3d9ded7d1c0dfc2d59edfc2d7">[email&#160;protected]</span></a></p>
     </div>
   </div>
 </div>
@@ -600,14 +897,4 @@ function doSubmit(){
   const req=['f-fn','f-ln','f-dob','f-email','f-mob','f-nat','f-imm','f-nric','f-work','f-unit','f-block','f-street','f-city','f-post'];
   let ok=true;
   req.forEach(id=>{const el=document.getElementById(id);if(!el||!el.value.trim()){if(el)el.style.borderColor='#E8670A';ok=false;}else el.style.borderColor='';});
-  if(!document.getElementById('chk-faq').checked||!document.getElementById('chk-waiver').checked){alert('Please tick all required declarations.');return;}
-  if(!document.getElementById('f-wa').value){alert('Please indicate if you agree to join IWA WhatsApp groups.');return;}
-  if(!ok){alert('Please fill in all required fields marked with *.');return;}
-  document.getElementById('mf-content').style.display='none';
-  document.getElementById('mf-success').style.display='block';
-}
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
-</script>
-</body>
-</html>
+  if(!document.getElementById('chk-faq').checked||!document.getElemen
