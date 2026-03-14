@@ -431,6 +431,52 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
   .bazaar-reg-card { padding:28px; }
 }
 
+
+/* ── CLUB DETAIL PAGE ── */
+.club-detail-page { background:#FAF7F2; min-height:80vh; }
+.club-detail-page .page-hero { position:relative; overflow:hidden; }
+.club-hero-accent { position:absolute; right:-60px; top:50%; transform:translateY(-50%); font-size:14rem; opacity:0.07; line-height:1; pointer-events:none; }
+.club-back-btn { display:inline-flex; align-items:center; gap:8px; font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:rgba(255,255,255,0.5); text-decoration:none; margin-bottom:20px; cursor:pointer; transition:color 0.2s; background:none; border:none; }
+.club-back-btn:hover { color:#F4A820; }
+.club-detail-layout { max-width:1200px; margin:0 auto; padding:56px 5vw; display:grid; grid-template-columns:2fr 1fr; gap:64px; align-items:start; }
+.club-body { font-size:0.97rem; color:#6B6460; line-height:1.85; }
+.club-body p { margin-bottom:18px; }
+.club-quote { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; font-style:italic; color:#9B1B30; line-height:1.45; padding:28px 0 28px 24px; border-left:3px solid #C9973A; margin:32px 0; }
+.club-sidebar {}
+.club-info-card { background:linear-gradient(160deg,#1C1C1E 0%,#2A1518 100%); padding:36px; margin-bottom:16px; }
+.club-info-title { font-family:'Cormorant Garamond',serif; font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; color:#F4A820; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid rgba(201,151,58,0.2); }
+.club-info-row { margin-bottom:18px; }
+.club-info-label { font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-bottom:4px; }
+.club-info-value { font-size:0.9rem; color:white; }
+.club-info-value a { color:#F4A820; text-decoration:none; }
+.club-info-value a:hover { text-decoration:underline; }
+.club-join-card { background:#F5EFE6; padding:28px; border-left:3px solid #E8670A; }
+.club-join-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:#1C1C1E; margin-bottom:8px; }
+.club-join-desc { font-size:0.82rem; color:#6B6460; line-height:1.6; margin-bottom:16px; }
+.club-events-section { max-width:1200px; margin:0 auto; padding:0 5vw 72px; }
+.club-events-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:#1C1C1E; margin-bottom:24px; padding-bottom:12px; border-bottom:2px solid rgba(200,155,58,0.3); }
+.club-events-list { display:flex; flex-direction:column; gap:1px; background:rgba(200,155,58,0.15); }
+.club-event-row { background:#FAF7F2; display:grid; grid-template-columns:130px 1fr; gap:20px; padding:14px 20px; font-size:0.85rem; transition:background 0.2s; text-decoration:none; color:#1C1C1E; }
+.club-event-row:hover { background:white; }
+.club-event-date { color:#6B6460; font-size:0.8rem; flex-shrink:0; }
+.club-event-name { color:#1C1C1E; }
+/* Club nav sidebar */
+.club-nav-card { background:white; border:1px solid rgba(200,155,58,0.2); padding:24px; }
+.club-nav-title { font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#6B6460; margin-bottom:14px; }
+.club-nav-list { list-style:none; }
+.club-nav-list li a { display:flex; align-items:center; gap:10px; font-size:0.83rem; color:#1C1C1E; text-decoration:none; padding:9px 0; border-bottom:1px solid rgba(200,155,58,0.15); transition:color 0.2s; }
+.club-nav-list li a:hover { color:#E8670A; }
+.club-nav-list li a .cnav-icon { font-size:1rem; }
+.club-nav-list li a.active { color:#E8670A; font-weight:600; }
+/* Clubs listing page update - clicking goes to detail */
+.club-pg-card { cursor:pointer; }
+
+@media(max-width:768px){
+  .club-detail-layout { grid-template-columns:1fr; gap:40px; }
+  .club-hero-accent { display:none; }
+  .club-events-section { padding:0 5vw 48px; }
+}
+
 </style>
 </head>
 <body>
@@ -974,34 +1020,957 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
     </div>
   </div>
 </div>
-<div id="page-clubs" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner">
-    <div class="page-breadcrumb">Home &rsaquo; <span>Clubs</span></div>
-    <h1 class="page-hero-title">Interest <em>Clubs</em></h1>
-    <p class="page-hero-sub">15 vibrant clubs spanning arts, culture, wellness, food, travel and enterprise &mdash; there&rsquo;s a home for every passion.</p>
-  </div></div>
-  <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
-    <div class="clubs-page-grid">
-      <a href="https://www.iwasingapore.org/Acts-of-Kindness-(AOK)" target="_blank" class="club-pg-card"><div class="club-pg-icon">💛</div><div class="club-pg-name">Acts of Kindness (AOK)</div><div class="club-pg-desc">The heart of IWA&rsquo;s community spirit. AOK organises charity drives, distribution events, volunteering activities, and initiatives that spread kindness across Singapore.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Adda-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">☕</div><div class="club-pg-name">Adda Club</div><div class="club-pg-desc">A vibrant discussion forum where members gather to debate, reflect and share perspectives on life, relationships, society, and everything in between.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Book-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">📚</div><div class="club-pg-name">Book Club</div><div class="club-pg-desc">Monthly gatherings to discuss great literature spanning Indian fiction, global bestsellers, non-fiction, and everything that sparks a lively conversation.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Creative-Hands-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎨</div><div class="club-pg-name">Creative Hands Club</div><div class="club-pg-desc">A hands-on creative space for art workshops, painting, crafting, and exploring diverse artistic techniques &mdash; from Zentangle to Lippan art.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Entrepreneur-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">💼</div><div class="club-pg-name">Entrepreneur Club</div><div class="club-pg-desc">A platform for women entrepreneurs and aspiring business owners to network, learn, pitch ideas and grow their ventures in Singapore&rsquo;s vibrant ecosystem.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/page-1860340" target="_blank" class="club-pg-card"><div class="club-pg-icon">👨‍👩‍👧</div><div class="club-pg-name">Family Club</div><div class="club-pg-desc">Fun-filled events for the whole family &mdash; beach picnics, holiday celebrations, cultural festivals and activities designed to bring families together.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Games-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎲</div><div class="club-pg-name">Games Club</div><div class="club-pg-desc">From Mahjong to board games, Teen Patti to Scrabble &mdash; a playful club for women who love to play, laugh, and connect over friendly competition.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Gourmet-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🍜</div><div class="club-pg-name">Gourmet Goddess Club</div><div class="club-pg-desc">For the food-passionate &mdash; cooking sessions, restaurant outings, themed food events and culinary explorations celebrating flavours from India and beyond.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Health-&-Fitness-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🧘</div><div class="club-pg-name">Health &amp; Fitness Club</div><div class="club-pg-desc">Zumba, yoga, nature walks, sound healing and wellness talks &mdash; championing holistic health and active lifestyles for IWA members.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Movie-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎬</div><div class="club-pg-name">Movie Club</div><div class="club-pg-desc">Monthly film screenings and discussions spanning Indian cinema, world films, Netflix picks and more &mdash; for the discerning movie lover.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Music-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎵</div><div class="club-pg-name">Music Club</div><div class="club-pg-desc">Celebrating Indian music across all genres &mdash; Bollywood, classical, ghazals, sufi and more. Monthly sessions of singing, listening and musical exploration.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/performing-arts-club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎭</div><div class="club-pg-name">Performing Arts Club</div><div class="club-pg-desc">Dance, drama, improv and performance workshops. From Garba to stage acting &mdash; a space for every woman who loves to express through the performing arts.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/TexStyle-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🧵</div><div class="club-pg-name">TexStyle Club</div><div class="club-pg-desc">Saree draping, fabric care, jewellery making, makeup demos and styling workshops &mdash; celebrating Indian fashion and the art of dressing beautifully.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Travel-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">✈️</div><div class="club-pg-name">Travel Club</div><div class="club-pg-desc">Local heritage walks, day trips across Singapore, and regional getaways. Discover Singapore and Southeast Asia with fellow adventurous women.</div><span class="club-pg-link">Learn more &rarr;</span></a>
-      <a href="https://www.iwasingapore.org/Writing-Enthusiasts-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">✍️</div><div class="club-pg-name">Writing Enthusiasts&rsquo; Club</div><div class="club-pg-desc">Poetry, prose, creative writing workshops and author interactions &mdash; a nurturing space for women who find their voice through the written word.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+<div id="page-clubs" class="page about-page club-detail-page">
+  <!-- CLUBS LISTING VIEW -->
+  <div id="clubs-listing">
+    <div class="page-hero"><div class="page-hero-inner">
+      <div class="page-breadcrumb">Home &rsaquo; <span>Clubs</span></div>
+      <h1 class="page-hero-title">Interest <em>Clubs</em></h1>
+      <p class="page-hero-sub">15 vibrant clubs spanning arts, culture, wellness, food, travel and enterprise &mdash; there&rsquo;s a home for every passion.</p>
+    </div></div>
+    <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
+      <div class="clubs-page-grid">
+        <div class="club-pg-card" onclick="showClub('club-aok')"><div class="club-pg-icon">💛</div><div class="club-pg-name">Acts of Kindness (AOK)</div><div class="club-pg-desc">Charity drives, volunteering, and community service initiatives that spread kindness across Singapore.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-adda')"><div class="club-pg-icon">☕</div><div class="club-pg-name">Adda Club</div><div class="club-pg-desc">Stimulating discussions and debates on life, relationships, society, culture and everything in between.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-book')"><div class="club-pg-icon">📚</div><div class="club-pg-name">Book Club</div><div class="club-pg-desc">Monthly book discussions spanning Indian fiction, global bestsellers, classics and non-fiction.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-creative')"><div class="club-pg-icon">🎨</div><div class="club-pg-name">Creative Hands Club</div><div class="club-pg-desc">Hands-on art workshops exploring Zentangle, Lippan art, Tanjore fusion, silk lanterns, and more.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-entrepreneur')"><div class="club-pg-icon">💼</div><div class="club-pg-name">Entrepreneur Club</div><div class="club-pg-desc">Networking, workshops and events for women entrepreneurs and aspiring business owners.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-family')"><div class="club-pg-icon">👨‍👩‍👧</div><div class="club-pg-name">Family Club</div><div class="club-pg-desc">Fun-filled events for the whole family &mdash; picnics, festivals, holiday celebrations and more.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-games')"><div class="club-pg-icon">🎲</div><div class="club-pg-name">Games Club</div><div class="club-pg-desc">From Mahjong to board games, Teen Patti to Scrabble &mdash; fun, laughter and friendly competition.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-gourmet')"><div class="club-pg-icon">🍜</div><div class="club-pg-name">Gourmet Goddess Club</div><div class="club-pg-desc">Cooking demonstrations, themed culinary events and gourmet explorations celebrating food in all its forms.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-health')"><div class="club-pg-icon">🧘</div><div class="club-pg-name">Health &amp; Fitness Club</div><div class="club-pg-desc">Zumba, yoga, Tai Chi, Pilates, nature walks, sound healing and wellness workshops for all levels.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-movie')"><div class="club-pg-icon">🎬</div><div class="club-pg-name">Movie Club</div><div class="club-pg-desc">Monthly film screenings and discussions from Bollywood to world cinema, with occasional Q&As.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-music')"><div class="club-pg-icon">🎵</div><div class="club-pg-name">Music Club</div><div class="club-pg-desc">Themed evenings celebrating Bollywood, ghazals, sufi, classical and devotional Indian music.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-pa')"><div class="club-pg-icon">🎭</div><div class="club-pg-name">Performing Arts Club</div><div class="club-pg-desc">Dance, drama, improv and performance workshops from Garba to stage acting and Bollywood dance.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-texstyle')"><div class="club-pg-icon">🧵</div><div class="club-pg-name">TexStyle Club</div><div class="club-pg-desc">Saree draping, fabric care, jewellery making, makeup tutorials and Indian fashion celebrations.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-travel')"><div class="club-pg-icon">✈️</div><div class="club-pg-name">Travel Club</div><div class="club-pg-desc">Heritage walks, Singapore day trips, and regional getaways discovering Asia together.</div><span class="club-pg-link">Explore &rarr;</span></div>
+        <div class="club-pg-card" onclick="showClub('club-wec')"><div class="club-pg-icon">✍️</div><div class="club-pg-name">Writing Enthusiasts&rsquo; Club</div><div class="club-pg-desc">Poetry, prose, creative writing workshops and author interactions for writers of every level.</div><span class="club-pg-link">Explore &rarr;</span></div>
+      </div>
+      <div style="background:#F5EFE6;padding:32px;margin-top:2px;text-align:center">
+        <p style="font-size:0.9rem;color:#6B6460;margin-bottom:16px">All clubs are open exclusively to IWA members. Events announced every Wednesday via e-Newsletter.</p>
+        <a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA to Access All Clubs &rarr;</a>
+      </div>
     </div>
-    <div style="background:#F5EFE6;padding:32px;margin-top:2px;text-align:center">
-      <p style="font-size:0.9rem;color:#6B6460;margin-bottom:16px">All clubs are open exclusively to IWA members. Events are announced every Wednesday via the weekly e-Newsletter.</p>
-      <a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA to Access All Clubs &rarr;</a>
+  </div>
+  <!-- CLUB DETAIL VIEWS -->
+  <div id="clubs-detail" style="display:none">
+    <div id="club-aok" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">💛</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Community Service & Volunteering</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">💛 Acts of Kindness (AOK)</h1>
     </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The Acts of Kindness (AOK) Club is the beating heart of IWA’s community spirit. AOK organises a diverse range of charity drives, distribution events, and volunteering initiatives that reach across Singapore’s most vulnerable communities.</p>
+<p>From grocery drives for HOME and migrant worker outings, to festive gift pack distributions, beach clean-ups, and saree donation drives — the AOK Club gives IWA members a tangible, joyful way to give back.</p>
+<p>The club collaborates closely with IWA’s I-Care partners including HOME, BSS, TWC2, SWAMI Home, SINDA, and other community organisations. No act of service is too small — every effort counts.</p></div>
+      <blockquote class="club-quote">"No act of kindness, no matter how small, is ever wasted." — Aesop</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA AOK Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Multiple events monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Community Service & Volunteering</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;" class="active"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6562515" target="_blank" class="club-event-row"><span class="club-event-date">Tue Mar 3, 2026</span><span class="club-event-name">AOK Club — Volunteer at Food from the Heart</span></a>
+<a href="https://www.iwasingapore.org/event-6285447" target="_blank" class="club-event-row"><span class="club-event-date">Wed Aug 6, 2025</span><span class="club-event-name">AOK Club — Saree Donation Drive</span></a>
+<a href="https://www.iwasingapore.org/event-6253029" target="_blank" class="club-event-row"><span class="club-event-date">Mon Jul 28, 2025</span><span class="club-event-name">AOK Club — Krishna’s Free Meals</span></a>
+<a href="https://www.iwasingapore.org/event-6172597" target="_blank" class="club-event-row"><span class="club-event-date">Sat May 10, 2025</span><span class="club-event-name">AOK Club — SG60 Initiative for Senior Citizens</span></a>
+<a href="https://www.iwasingapore.org/event-6173737" target="_blank" class="club-event-row"><span class="club-event-date">Wed Apr 30, 2025</span><span class="club-event-name">AOK — SG60 Donation Drive</span></a>
+<a href="https://www.iwasingapore.org/event-5642358" target="_blank" class="club-event-row"><span class="club-event-date">Sun Mar 31, 2024</span><span class="club-event-name">AOK & Family Club — Sewa</span></a>
+</div>
+  </div>
+</div>
+<div id="club-adda" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">☕</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Discussions & Debates</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">☕ Adda Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The Adda Club is IWA’s vibrant forum for stimulating conversation, debate and exchange of ideas. The word “adda” in Bengali and Hindi refers to a gathering of friends for lively, intellectually engaging chat — and that’s exactly what this club delivers.</p>
+<p>Topics span the full spectrum of life — relationships, career, culture, technology, philosophy, society and everything in between. Sessions are warm, inclusive, and always thought-provoking.</p>
+<p>Whether you want to challenge your perspectives, discover new viewpoints, or simply enjoy a stimulating conversation with like-minded women, Adda Club is where you belong.</p></div>
+      <blockquote class="club-quote">"The art of conversation is the art of hearing as well as of being heard." — William Hazlitt</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Adda Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Discussions & Debates</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;" class="active"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6514846" target="_blank" class="club-event-row"><span class="club-event-date">Fri Jan 23, 2026</span><span class="club-event-name">Adda Club — Reminisce 2025 and Welcome 2026</span></a>
+<a href="https://www.iwasingapore.org/event-6304358" target="_blank" class="club-event-row"><span class="club-event-date">Fri Aug 29, 2025</span><span class="club-event-name">Adda Club — My Favourite Things — Little Joys, Big Impact!</span></a>
+<a href="https://www.iwasingapore.org/event-6259664" target="_blank" class="club-event-row"><span class="club-event-date">Thu Jul 31, 2025</span><span class="club-event-name">Adda Club — Destiny or Free Will?</span></a>
+<a href="https://www.iwasingapore.org/event-6189705" target="_blank" class="club-event-row"><span class="club-event-date">Fri May 23, 2025</span><span class="club-event-name">Adda Club — AI — Friend, Future or a Frenzy?</span></a>
+<a href="https://www.iwasingapore.org/event-6118740" target="_blank" class="club-event-row"><span class="club-event-date">Fri Mar 28, 2025</span><span class="club-event-name">Adda Club — Reflection vs Perception!</span></a>
+<a href="https://www.iwasingapore.org/event-5602676" target="_blank" class="club-event-row"><span class="club-event-date">Thu Feb 22, 2024</span><span class="club-event-name">Adda & Entrepreneur Club — The X Factor</span></a>
+</div>
+  </div>
+</div>
+<div id="club-book" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">📚</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Literature & Reading</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">📚 Book Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Book Club brings together women who share a love for the written word. Each month, members gather to discuss a carefully chosen book — spanning Indian fiction, global bestsellers, literary classics, non-fiction and more.</p>
+<p>The club is more than just book discussions — it’s a space for cultural exchange, personal reflection, and genuine connection. Books have included works by Indian and international authors, from contemporary fiction to timeless classics.</p>
+<p>The Book Club has also hosted author interactions and collaborated with other clubs for cross-genre events. Nominations for new books are welcome from all members.</p></div>
+      <blockquote class="club-quote">"A reader lives a thousand lives before he dies. The man who never reads lives only one." — George R.R. Martin</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Book Club Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Literature & Reading</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;" class="active"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6582562" target="_blank" class="club-event-row"><span class="club-event-date">Wed Mar 11, 2026</span><span class="club-event-name">Book Club — The Women</span></a>
+<a href="https://www.iwasingapore.org/event-6539291" target="_blank" class="club-event-row"><span class="club-event-date">Wed Feb 11, 2026</span><span class="club-event-name">Book Club — The Let Them Theory</span></a>
+<a href="https://www.iwasingapore.org/event-5962649" target="_blank" class="club-event-row"><span class="club-event-date">Wed Jan 15, 2025</span><span class="club-event-name">Book Club — Lessons in Chemistry</span></a>
+<a href="https://www.iwasingapore.org/event-6359267" target="_blank" class="club-event-row"><span class="club-event-date">Wed Oct 8, 2025</span><span class="club-event-name">Book Club — Before the Coffee Gets Cold</span></a>
+<a href="https://www.iwasingapore.org/event-6312431" target="_blank" class="club-event-row"><span class="club-event-date">Wed Sep 10, 2025</span><span class="club-event-name">Book Club — Dust Child</span></a>
+<a href="https://www.iwasingapore.org/event-6173916" target="_blank" class="club-event-row"><span class="club-event-date">Wed May 14, 2025</span><span class="club-event-name">Book Club — Dream Count</span></a>
+</div>
+  </div>
+</div>
+<div id="club-creative" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🎨</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Art, Craft & Creative Workshops</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🎨 Creative Hands Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The Creative Hands Club (CHC) is IWA’s hands-on creative workshop space. Each session introduces members to a different art form or craft technique — from Zentangle to Lippan art, Tanjore fusion, Kerala mural jewellery, silk lantern making, glass painting, and much more.</p>
+<p>No artistic experience is required. The CHC welcomes all levels of creativity with a warm, encouraging environment. Sessions are designed to be both educational and deeply enjoyable.</p>
+<p>The club has explored an extraordinary range of techniques over the years, celebrating both Indian craft traditions and global art forms in a uniquely IWA way.</p></div>
+      <blockquote class="club-quote">"Creativity is intelligence having fun." — Albert Einstein</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Creative Hands Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Art, Craft & Creative Workshops</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;" class="active"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6560862" target="_blank" class="club-event-row"><span class="club-event-date">Fri Feb 20, 2026</span><span class="club-event-name">Creative Hands — Water Transfer Art Technique</span></a>
+<a href="https://www.iwasingapore.org/event-6415855" target="_blank" class="club-event-row"><span class="club-event-date">Thu Nov 13, 2025</span><span class="club-event-name">Creative Hands — Stencil Bookmark Painting</span></a>
+<a href="https://www.iwasingapore.org/event-6348133" target="_blank" class="club-event-row"><span class="club-event-date">Tue Sep 30, 2025</span><span class="club-event-name">Creative Hands — Silk Lantern Making</span></a>
+<a href="https://www.iwasingapore.org/event-6276881" target="_blank" class="club-event-row"><span class="club-event-date">Tue Aug 12, 2025</span><span class="club-event-name">Creative Hands — Apron Painting</span></a>
+<a href="https://www.iwasingapore.org/event-6038194" target="_blank" class="club-event-row"><span class="club-event-date">Wed Feb 5, 2025</span><span class="club-event-name">Creative Hands — Resin Art</span></a>
+<a href="https://www.iwasingapore.org/event-5833018" target="_blank" class="club-event-row"><span class="club-event-date">Wed Aug 21, 2024</span><span class="club-event-name">Creative Hands — Zentangle Art</span></a>
+</div>
+  </div>
+</div>
+<div id="club-entrepreneur" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">💼</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Business, Networking & Enterprise</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">💼 Entrepreneur Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>Women entrepreneurs play a prominent role in the business world, but they often face unique challenges balancing their personal and professional fronts. At the IWA Entrepreneur Club, we endeavour to support, encourage, and inspire each other.</p>
+<p>In addition to networking opportunities, the Club offers a variety of enriching events such as workshops, guest speaker sessions, business and industry events, and personal development courses.</p>
+<p>2019 was an iconic year for this Club, culminating in the introduction of IWApreneurs — a new platform for entrepreneurs to showcase their services and build their brand. Connect with us on <a href="https://www.linkedin.com/company/indian-womens-association-singapore" target="_blank" style="color:#E8670A">LinkedIn</a>.</p></div>
+      <blockquote class="club-quote">"Challenges are gifts that force us to search for a new centre of gravity. Don’t fight them. Just find a new way to stand." — Oprah Winfrey</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">Priyanka Vanjani</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:business@iwasingapore.org">business@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Once every two months</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Business, Networking & Enterprise</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;" class="active"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6593993" target="_blank" class="club-event-row"><span class="club-event-date">Fri Mar 13, 2026</span><span class="club-event-name">Entrepreneur Club — One Women Army</span></a>
+<a href="https://www.iwasingapore.org/event-6527207" target="_blank" class="club-event-row"><span class="club-event-date">Fri Jan 30, 2026</span><span class="club-event-name">Entrepreneur Club — The Art of Effective Communication</span></a>
+<a href="https://www.iwasingapore.org/event-6431493" target="_blank" class="club-event-row"><span class="club-event-date">Mon Nov 24, 2025</span><span class="club-event-name">Entrepreneur Club — AI Integration Session</span></a>
+<a href="https://www.iwasingapore.org/event-6392774" target="_blank" class="club-event-row"><span class="club-event-date">Thu Oct 30, 2025</span><span class="club-event-name">Entrepreneur Club — Online Introduction Mixer (Service Industry)</span></a>
+<a href="https://www.iwasingapore.org/event-6322532" target="_blank" class="club-event-row"><span class="club-event-date">Mon Sep 15, 2025</span><span class="club-event-name">Entrepreneur Club — Digital Essentials</span></a>
+<a href="https://www.iwasingapore.org/event-6205612" target="_blank" class="club-event-row"><span class="club-event-date">Thu Jul 3, 2025</span><span class="club-event-name">Entrepreneur Club — Pathway to Success</span></a>
+<a href="https://www.iwasingapore.org/event-6163713" target="_blank" class="club-event-row"><span class="club-event-date">Thu May 8, 2025</span><span class="club-event-name">Entrepreneur Club — Empowering Entrepreneurs</span></a>
+<a href="https://www.iwasingapore.org/event-5833015" target="_blank" class="club-event-row"><span class="club-event-date">Thu Aug 29, 2024</span><span class="club-event-name">Entrepreneur Club — Entrepreneurial Mindset</span></a>
+</div>
+  </div>
+</div>
+<div id="club-family" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">👨‍👩‍👧</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Family & Kids’ Activities</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">👨‍👩‍👧 Family Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Family Club brings together the whole family — designed for members who love celebrating life’s moments with their loved ones. Events are inclusive, fun-filled and suitable for all ages.</p>
+<p>From beach picnics and kite-flying at Marina Barrage, to Holi celebrations, Garba evenings, Singapore Botanic Gardens outings and festive fun fiestas — the Family Club creates joyful memories that bring the IWA community closer together.</p>
+<p>The club also collaborates with other IWA clubs for cross-interest events, blending food, music, dance and outdoor activities into unforgettable family experiences.</p></div>
+      <blockquote class="club-quote">"Family is not an important thing. It’s everything." — Michael J. Fox</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Family Club Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Family & Kids’ Activities</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;" class="active"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6560868" target="_blank" class="club-event-row"><span class="club-event-date">Sun Feb 22, 2026</span><span class="club-event-name">Family Club — Valentine’s Day Celebration</span></a>
+<a href="https://www.iwasingapore.org/event-6514873" target="_blank" class="club-event-row"><span class="club-event-date">Sun Jan 25, 2026</span><span class="club-event-name">Family Club — Kite Flying at Marina Barrage</span></a>
+<a href="https://www.iwasingapore.org/event-6422754" target="_blank" class="club-event-row"><span class="club-event-date">Sun Nov 16, 2025</span><span class="club-event-name">Family Club — Festive Fun Fiesta</span></a>
+<a href="https://www.iwasingapore.org/event-6293707" target="_blank" class="club-event-row"><span class="club-event-date">Sun Aug 24, 2025</span><span class="club-event-name">Family Club — Celebrating Independence and National Day Fusion</span></a>
+<a href="https://www.iwasingapore.org/event-6253034" target="_blank" class="club-event-row"><span class="club-event-date">Sun Jul 20, 2025</span><span class="club-event-name">Family Club — Singapore Botanic Gardens</span></a>
+<a href="https://www.iwasingapore.org/event-6146689" target="_blank" class="club-event-row"><span class="club-event-date">Sat Apr 26, 2025</span><span class="club-event-name">Family Club — Beach Picnic</span></a>
+</div>
+  </div>
+</div>
+<div id="club-games" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🎲</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Board Games, Mahjong & More</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🎲 Games Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Games Club is where fun, laughter and friendly competition come together. From Mahjong masterclasses and Scrabble challenges to board games, Teen Patti, dumb charades and bowling — every session is guaranteed to be a great time.</p>
+<p>The club welcomes all skill levels and game preferences. It’s a wonderful space to unwind, meet new friends, and discover games from different cultures and traditions.</p>
+<p>Thematic game nights — like the Diwali Teen Patti evening and the Valentine’s Day Themed Games — make every session feel special and celebratory.</p></div>
+      <blockquote class="club-quote">"Play is the highest form of research." — Albert Einstein</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Games Club Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Board Games, Mahjong & More</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;" class="active"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6582250" target="_blank" class="club-event-row"><span class="club-event-date">Tue Mar 10, 2026</span><span class="club-event-name">Games Club — Mahjong Masterclass</span></a>
+<a href="https://www.iwasingapore.org/event-6549535" target="_blank" class="club-event-row"><span class="club-event-date">Thu Feb 12, 2026</span><span class="club-event-name">Games Club — Scrabble Challenge</span></a>
+<a href="https://www.iwasingapore.org/event-6500818" target="_blank" class="club-event-row"><span class="club-event-date">Mon Jan 12, 2026</span><span class="club-event-name">Games Club — Art and Design of Asian Games (Tour)</span></a>
+<a href="https://www.iwasingapore.org/event-6370882" target="_blank" class="club-event-row"><span class="club-event-date">Mon Oct 13, 2025</span><span class="club-event-name">Games Club — Diwali with Teen Patti</span></a>
+<a href="https://www.iwasingapore.org/event-6293696" target="_blank" class="club-event-row"><span class="club-event-date">Mon Aug 25, 2025</span><span class="club-event-name">Games Club — Mahjong</span></a>
+<a href="https://www.iwasingapore.org/event-6118766" target="_blank" class="club-event-row"><span class="club-event-date">Tue Apr 1, 2025</span><span class="club-event-name">Games Club — Dumb Charades, Childhood Games & Stories</span></a>
+</div>
+  </div>
+</div>
+<div id="club-gourmet" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🍜</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Food, Cooking & Culinary Arts</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🍜 Gourmet Goddess Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The Gourmet Goddess Club (GGC) is IWA’s celebration of food in all its glorious forms. Monthly sessions bring together food-passionate women for cooking demonstrations, themed culinary events, restaurant outings, and gourmet explorations.</p>
+<p>The GGC has explored cuisines from across India and the world — Indo-Mexican fusion, street food from India, Azaadi ka Jashn, Masala Madness, Mother’s Day specials, BBQ parties and much more.</p>
+<p>Whether you are an accomplished cook or an enthusiastic eater, the Gourmet Goddess Club welcomes you to indulge your love of food, flavour, and fellowship.</p></div>
+      <blockquote class="club-quote">"One cannot think well, love well, sleep well, if one has not dined well." — Virginia Woolf</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA GGC Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Food, Cooking & Culinary Arts</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;" class="active"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6500812" target="_blank" class="club-event-row"><span class="club-event-date">Wed Jan 21, 2026</span><span class="club-event-name">GGC — Street Food from India</span></a>
+<a href="https://www.iwasingapore.org/event-6322523" target="_blank" class="club-event-row"><span class="club-event-date">Thu Sep 16, 2025</span><span class="club-event-name">GGC — Indo-Mexican Fusion</span></a>
+<a href="https://www.iwasingapore.org/event-6267916" target="_blank" class="club-event-row"><span class="club-event-date">Mon Aug 4, 2025</span><span class="club-event-name">GGC — Food from South East Asia</span></a>
+<a href="https://www.iwasingapore.org/event-6180933" target="_blank" class="club-event-row"><span class="club-event-date">Thu May 22, 2025</span><span class="club-event-name">GGC — Mother’s Day Special</span></a>
+<a href="https://www.iwasingapore.org/event-6096718" target="_blank" class="club-event-row"><span class="club-event-date">Thu Mar 27, 2025</span><span class="club-event-name">GGC — BBQ Party</span></a>
+<a href="https://www.iwasingapore.org/event-5801614" target="_blank" class="club-event-row"><span class="club-event-date">Fri Aug 2, 2024</span><span class="club-event-name">GGC & Adda Club — Mango Moments</span></a>
+</div>
+  </div>
+</div>
+<div id="club-health" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🧘</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Wellness, Fitness & Active Living</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🧘 Health & Fitness Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Health & Fitness Club champions holistic wellbeing for every member. From Zumba and Yoga to Tai Chi, Pilates, sound healing therapy, and nature walks — the club offers a diverse range of wellness activities for all fitness levels.</p>
+<p>Beyond physical fitness, the club also organises health talks, wellness workshops, and informative sessions on topics like stress management, Ayurveda, and women’s health in partnership with Privilege Partners like Raffles Hospital.</p>
+<p>The club’s nature walks take members through Singapore’s beautiful parks and nature reserves — MacRitchie, Labrador Park, Bedok Reservoir, Southern Ridges and beyond — combining fitness with exploration.</p></div>
+      <blockquote class="club-quote">"Take care of your body. It’s the only place you have to live." — Jim Rohn</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Health & Fitness Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Wellness, Fitness & Active Living</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;" class="active"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6605953" target="_blank" class="club-event-row"><span class="club-event-date">Mon Mar 23, 2026</span><span class="club-event-name">Health & Fitness — Tai Chi Workshop</span></a>
+<a href="https://www.iwasingapore.org/event-6560854" target="_blank" class="club-event-row"><span class="club-event-date">Sat Feb 21, 2026</span><span class="club-event-name">Health & Fitness — Wheels and Smiles (Cycling)</span></a>
+<a href="https://www.iwasingapore.org/event-6502250" target="_blank" class="club-event-row"><span class="club-event-date">Mon Jan 19, 2026</span><span class="club-event-name">Health & Fitness — Pilates</span></a>
+<a href="https://www.iwasingapore.org/event-6431489" target="_blank" class="club-event-row"><span class="club-event-date">Wed Nov 19, 2025</span><span class="club-event-name">Health & Fitness — Sunset Symphony Walk</span></a>
+<a href="https://www.iwasingapore.org/event-6322529" target="_blank" class="club-event-row"><span class="club-event-date">Fri Sep 12, 2025</span><span class="club-event-name">Health & Fitness — Yamuna Ball Therapy</span></a>
+<a href="https://www.iwasingapore.org/event-6269154" target="_blank" class="club-event-row"><span class="club-event-date">Fri Aug 1, 2025</span><span class="club-event-name">Health & Fitness — Sound Healing Therapy</span></a>
+</div>
+  </div>
+</div>
+<div id="club-movie" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🎬</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Film Screenings & Discussions</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🎬 Movie Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Movie Club is a celebration of world cinema — from Bollywood blockbusters and Indian art films to global hits and Netflix picks. Each month, members watch a chosen film and gather for a thoughtful discussion.</p>
+<p>The club has screened an eclectic range of films across genres and languages, from HAQ and Laapataa Ladies to Schindler’s List and Crazy Rich Asians. Members also vote on upcoming film selections.</p>
+<p>The Movie Club has hosted special events including Q&A sessions with directors and actors, making it a uniquely enriching cultural experience beyond just film-watching.</p></div>
+      <blockquote class="club-quote">"Cinema is a mirror by which we often see ourselves." — Martin Scorsese</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Movie Club Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Film Screenings & Discussions</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;" class="active"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6569206" target="_blank" class="club-event-row"><span class="club-event-date">Fri Mar 6, 2026</span><span class="club-event-name">Movie Club — HAQ (Netflix 2025)</span></a>
+<a href="https://www.iwasingapore.org/event-6155613" target="_blank" class="club-event-row"><span class="club-event-date">Fri May 2, 2025</span><span class="club-event-name">Movie Club — Adolescence</span></a>
+<a href="https://www.iwasingapore.org/event-6098100" target="_blank" class="club-event-row"><span class="club-event-date">Fri Mar 21, 2025</span><span class="club-event-name">Movie Club — Dominoes</span></a>
+<a href="https://www.iwasingapore.org/event-6027122" target="_blank" class="club-event-row"><span class="club-event-date">Fri Feb 7, 2025</span><span class="club-event-name">Movie Club — Zindagi Na Milegi Dobara</span></a>
+<a href="https://www.iwasingapore.org/event-6231543" target="_blank" class="club-event-row"><span class="club-event-date">Fri Jul 11, 2025</span><span class="club-event-name">Movie Club — Laapataa Ladies</span></a>
+<a href="https://www.iwasingapore.org/event-6293674" target="_blank" class="club-event-row"><span class="club-event-date">Fri Aug 22, 2025</span><span class="club-event-name">Movie Club — The Spy</span></a>
+</div>
+  </div>
+</div>
+<div id="club-music" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🎵</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Indian Music, Singing & Appreciation</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🎵 Music Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Music Club is a vibrant celebration of Indian music in all its richness — Bollywood, ghazals, sufi, classical, semi-classical, folk and devotional. Monthly sessions bring together music lovers for themed evenings of singing, listening and musical appreciation.</p>
+<p>Each session has a unique theme — from Rang-e-Ghazal and Sufi Ke Saath Sukoon to Tribute to Rafi Sahab and Kapoor Glam & Khan Magic. The club has also hosted special events featuring live performances and music mentorship sessions.</p>
+<p>Open to all music lovers — whether you sing, play an instrument, or simply love listening — the Music Club is a warm and joyful space for musical exploration and connection.</p></div>
+      <blockquote class="club-quote">"Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything." — Plato</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Music Club Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Indian Music, Singing & Appreciation</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;" class="active"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6593979" target="_blank" class="club-event-row"><span class="club-event-date">Thu Mar 19, 2026</span><span class="club-event-name">Music Club — Rangon Mein Surmayi Jung</span></a>
+<a href="https://www.iwasingapore.org/event-6458311" target="_blank" class="club-event-row"><span class="club-event-date">Thu Jan 15, 2026</span><span class="club-event-name">Music Club — Soulful Rhythms</span></a>
+<a href="https://www.iwasingapore.org/event-6370869" target="_blank" class="club-event-row"><span class="club-event-date">Wed Oct 15, 2025</span><span class="club-event-name">Music Club — Bollywood Hungama</span></a>
+<a href="https://www.iwasingapore.org/event-6322517" target="_blank" class="club-event-row"><span class="club-event-date">Thu Sep 18, 2025</span><span class="club-event-name">Music Club — Kapoor Glam & Khan Magic</span></a>
+<a href="https://www.iwasingapore.org/event-6231566" target="_blank" class="club-event-row"><span class="club-event-date">Thu Jul 17, 2025</span><span class="club-event-name">Music Club — Rain & Romance</span></a>
+<a href="https://www.iwasingapore.org/event-6172583" target="_blank" class="club-event-row"><span class="club-event-date">Thu May 15, 2025</span><span class="club-event-name">Music Club — Meri Marzi</span></a>
+</div>
+  </div>
+</div>
+<div id="club-pa" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🎭</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Dance, Drama & Performance</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🎭 Performing Arts Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Performing Arts Club is a dynamic space for women who love to express themselves through dance, drama, and the performing arts. From Garba and Bharatanatyam to Bollywood dance, improv theatre, and stage acting workshops — the club embraces the full spectrum of performance.</p>
+<p>The club has staged productions, hosted workshops with overseas artists, performed at IWA signature events, and collaborated with other clubs on cross-genre shows. Recent sessions include The Improv Show, Dhunuchi Naach, and I like to “Reel It, Reel It!”</p>
+<p>Whether you’re a seasoned performer or a curious beginner, the Performing Arts Club welcomes all women who want to discover the joy of performance.</p></div>
+      <blockquote class="club-quote">"To watch us dance is to hear our hearts speak." — Indian proverb</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Performing Arts Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Dance, Drama & Performance</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;" class="active"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6550590" target="_blank" class="club-event-row"><span class="club-event-date">Wed Feb 25, 2026</span><span class="club-event-name">PA Club — Get “Dance” Ready for Holi</span></a>
+<a href="https://www.iwasingapore.org/event-6275622" target="_blank" class="club-event-row"><span class="club-event-date">Tue Aug 19, 2025</span><span class="club-event-name">PA Club — Dhunuchi Naach</span></a>
+<a href="https://www.iwasingapore.org/event-6205568" target="_blank" class="club-event-row"><span class="club-event-date">Tue Jul 8, 2025</span><span class="club-event-name">PA Club — I like to “Reel It, Reel It!”</span></a>
+<a href="https://www.iwasingapore.org/event-6322555" target="_blank" class="club-event-row"><span class="club-event-date">Sun Sep 21, 2025</span><span class="club-event-name">PA & Family Clubs — Garba Raas</span></a>
+<a href="https://www.iwasingapore.org/event-6087311" target="_blank" class="club-event-row"><span class="club-event-date">Tue Mar 11, 2025</span><span class="club-event-name">PA Club — The Improv Show</span></a>
+<a href="https://www.iwasingapore.org/event-6515741" target="_blank" class="club-event-row"><span class="club-event-date">Mon Jan 26, 2026</span><span class="club-event-name">PA Club — Republic Day Celebration</span></a>
+</div>
+  </div>
+</div>
+<div id="club-texstyle" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">🧵</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Fashion, Styling & Indian Textiles</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">🧵 TexStyle Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA TexStyle Club is a celebration of Indian fashion, textiles, styling and beauty. Sessions cover a gorgeous range of topics — saree draping, fabric care and stain removal, jewellery making, crochet workshops, makeup tutorials, and the art of Indian block printing.</p>
+<p>The club also organises saree/dupatta swaps, heirloom showcases, and festive meet & greet sessions that honour the rich traditions of Indian dress and adornment.</p>
+<p>Whether you are passionate about Indian textiles, personal styling, or simply love everything fashion — the TexStyle Club is your home at IWA.</p></div>
+      <blockquote class="club-quote">"Fashion is the armor to survive the reality of everyday life." — Bill Cunningham</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA TexStyle Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Fashion, Styling & Indian Textiles</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;" class="active"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6582240" target="_blank" class="club-event-row"><span class="club-event-date">Thu Mar 12, 2026</span><span class="club-event-name">TexStyle — Cherished Heirlooms</span></a>
+<a href="https://www.iwasingapore.org/event-6527204" target="_blank" class="club-event-row"><span class="club-event-date">Wed Feb 4, 2026</span><span class="club-event-name">TexStyle — Eye Makeup Essentials for Mature Eyes</span></a>
+<a href="https://www.iwasingapore.org/event-6500800" target="_blank" class="club-event-row"><span class="club-event-date">Tue Jan 20, 2026</span><span class="club-event-name">TexStyle — Crochet Bracelet Workshop</span></a>
+<a href="https://www.iwasingapore.org/event-6422749" target="_blank" class="club-event-row"><span class="club-event-date">Mon Nov 17, 2025</span><span class="club-event-name">TexStyle — Essentials of Fabric Care & Stain Removal</span></a>
+<a href="https://www.iwasingapore.org/event-6338558" target="_blank" class="club-event-row"><span class="club-event-date">Mon Sep 22, 2025</span><span class="club-event-name">TexStyle — Indian Block Printing</span></a>
+<a href="https://www.iwasingapore.org/event-6253021" target="_blank" class="club-event-row"><span class="club-event-date">Wed Jul 23, 2025</span><span class="club-event-name">TexStyle — Saree Draping Demo</span></a>
+</div>
+  </div>
+</div>
+<div id="club-travel" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">✈️</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Local Walks, Day Trips & Travel</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">✈️ Travel Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Travel Club takes members on adventures near and far. From heritage walks through Singapore’s Kampong Gelam, Chinatown, and Little India, to day trips to Bird Paradise, Johor Bahru, and overnight trips to Bintan — the club keeps the spirit of exploration alive.</p>
+<p>Sessions often weave together history, culture, food, and community. The club collaborates with cultural institutions like the National Gallery and Indian Heritage Centre for uniquely enriching visits.</p>
+<p>Whether you are new to Singapore and eager to explore, or a long-time resident discovering new corners of the island, the Travel Club invites you to journey together.</p></div>
+      <blockquote class="club-quote">"The world is a book, and those who do not travel read only one page." — Saint Augustine</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA Travel Club Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Local Walks, Day Trips & Travel</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;" class="active"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6605928" target="_blank" class="club-event-row"><span class="club-event-date">Sat Apr 18, 2026</span><span class="club-event-name">Travel Club — Trip to Bintan</span></a>
+<a href="https://www.iwasingapore.org/event-6593987" target="_blank" class="club-event-row"><span class="club-event-date">Fri Mar 20, 2026</span><span class="club-event-name">Travel Club — Geylang Serai Market Tour</span></a>
+<a href="https://www.iwasingapore.org/event-6550597" target="_blank" class="club-event-row"><span class="club-event-date">Thu Feb 26, 2026</span><span class="club-event-name">Travel Club — Trip to Bird Paradise</span></a>
+<a href="https://www.iwasingapore.org/event-6517892" target="_blank" class="club-event-row"><span class="club-event-date">Thu Jan 29, 2026</span><span class="club-event-name">Travel Club — Hyundai Discovery Tour</span></a>
+<a href="https://www.iwasingapore.org/event-6322547" target="_blank" class="club-event-row"><span class="club-event-date">Wed Sep 17, 2025</span><span class="club-event-name">Travel Club — Visit to National Gallery</span></a>
+<a href="https://www.iwasingapore.org/event-6205591" target="_blank" class="club-event-row"><span class="club-event-date">Wed Jul 16, 2025</span><span class="club-event-name">Travel Club — Day Trip to Johor Bahru</span></a>
+</div>
+  </div>
+</div>
+<div id="club-wec" class="club-detail-inner" style="display:none">
+  <div style="background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%);padding:64px 5vw 56px;position:relative;overflow:hidden">
+    <div class="club-hero-accent">✍️</div>
+    <div style="max-width:1200px;margin:0 auto">
+      <button class="club-back-btn" onclick="backToClubs()">&#8592; All Clubs</button>
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:12px">Creative Writing & Poetry</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:300;color:white;line-height:1.05;margin-bottom:0">✍️ Writing Enthusiasts' Club</h1>
+    </div>
+  </div>
+  <div class="club-detail-layout">
+    <div>
+      <div class="club-body"><p>The IWA Writing Enthusiasts’ Club (WEC) is a nurturing space for women who find their voice through the written word. Sessions explore a wide range of writing forms — poetry, short stories, prose, ekphrasis, erasure poetry, limericks, and more.</p>
+<p>The club has hosted author interactions, participated in Singapore’s Poetry Festival, organised themed writing sessions and celebrated the works of legendary women writers. It’s a warm, encouraging community for writers at every level.</p>
+<p>Whether you’re an experienced writer or someone who has always wanted to try — the WEC invites you to pick up your pen and discover the joy of writing.</p></div>
+      <blockquote class="club-quote">"There is no greater agony than bearing an untold story inside you." — Maya Angelou</blockquote>
+    </div>
+    <div class="club-sidebar">
+      <div class="club-info-card">
+        <div class="club-info-title">Club Details</div>
+        <div class="club-info-row"><div class="club-info-label">Club Chair</div><div class="club-info-value">IWA WEC Team</div></div>
+        <div class="club-info-row"><div class="club-info-label">Contact</div><div class="club-info-value"><a href="mailto:secretary@iwasingapore.org">secretary@iwasingapore.org</a></div></div>
+        <div class="club-info-row"><div class="club-info-label">Frequency</div><div class="club-info-value">Monthly</div></div>
+        <div class="club-info-row"><div class="club-info-label">Focus</div><div class="club-info-value">Creative Writing & Poetry</div></div>
+      </div>
+      <div class="club-join-card">
+        <div class="club-join-title">Join this Club</div>
+        <div class="club-join-desc">This club is open exclusively to IWA members. Join IWA to access all 15 clubs and events.</div>
+        <a href="#" class="btn-primary" style="display:block;text-align:center" onclick="openModal();return false;">Join IWA &rarr;</a>
+      </div>
+      <div class="club-nav-card" style="margin-top:16px">
+        <div class="club-nav-title">All Clubs</div>
+        <ul class="club-nav-list"><li><a href="#" onclick="showClub('club-aok');return false;"><span class="cnav-icon">💛</span>Acts of Kindness (AOK)</a></li>
+<li><a href="#" onclick="showClub('club-adda');return false;"><span class="cnav-icon">☕</span>Adda Club</a></li>
+<li><a href="#" onclick="showClub('club-book');return false;"><span class="cnav-icon">📚</span>Book Club</a></li>
+<li><a href="#" onclick="showClub('club-creative');return false;"><span class="cnav-icon">🎨</span>Creative Hands Club</a></li>
+<li><a href="#" onclick="showClub('club-entrepreneur');return false;"><span class="cnav-icon">💼</span>Entrepreneur Club</a></li>
+<li><a href="#" onclick="showClub('club-family');return false;"><span class="cnav-icon">👨‍👩‍👧</span>Family Club</a></li>
+<li><a href="#" onclick="showClub('club-games');return false;"><span class="cnav-icon">🎲</span>Games Club</a></li>
+<li><a href="#" onclick="showClub('club-gourmet');return false;"><span class="cnav-icon">🍜</span>Gourmet Goddess Club</a></li>
+<li><a href="#" onclick="showClub('club-health');return false;"><span class="cnav-icon">🧘</span>Health & Fitness Club</a></li>
+<li><a href="#" onclick="showClub('club-movie');return false;"><span class="cnav-icon">🎬</span>Movie Club</a></li>
+<li><a href="#" onclick="showClub('club-music');return false;"><span class="cnav-icon">🎵</span>Music Club</a></li>
+<li><a href="#" onclick="showClub('club-pa');return false;"><span class="cnav-icon">🎭</span>Performing Arts Club</a></li>
+<li><a href="#" onclick="showClub('club-texstyle');return false;"><span class="cnav-icon">🧵</span>TexStyle Club</a></li>
+<li><a href="#" onclick="showClub('club-travel');return false;"><span class="cnav-icon">✈️</span>Travel Club</a></li>
+<li><a href="#" onclick="showClub('club-wec');return false;" class="active"><span class="cnav-icon">✍️</span>Writing Enthusiasts' Club</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+  <div class="club-events-section">
+    <div class="club-events-title">Recent &amp; Past Events</div>
+    <div class="club-events-list"><a href="https://www.iwasingapore.org/event-6514886" target="_blank" class="club-event-row"><span class="club-event-date">Thu Jan 22, 2026</span><span class="club-event-name">WEC — Character by Zodiac</span></a>
+<a href="https://www.iwasingapore.org/event-6431496" target="_blank" class="club-event-row"><span class="club-event-date">Tue Nov 25, 2025</span><span class="club-event-name">WEC — Once Upon a Rewrite</span></a>
+<a href="https://www.iwasingapore.org/event-6347314" target="_blank" class="club-event-row"><span class="club-event-date">Thu Sep 25, 2025</span><span class="club-event-name">WEC — Fun with Limericks</span></a>
+<a href="https://www.iwasingapore.org/event-6293685" target="_blank" class="club-event-row"><span class="club-event-date">Thu Aug 28, 2025</span><span class="club-event-name">WEC — Patriotic Expressions</span></a>
+<a href="https://www.iwasingapore.org/event-6206469" target="_blank" class="club-event-row"><span class="club-event-date">Mon Jul 7, 2025</span><span class="club-event-name">WEC — Story Roulette</span></a>
+<a href="https://www.iwasingapore.org/event-6099533" target="_blank" class="club-event-row"><span class="club-event-date">Tue Mar 18, 2025</span><span class="club-event-name">WEC — Ink & Inspiration: Honouring Women Writers</span></a>
+</div>
+  </div>
+</div>
   </div>
 </div>
 <div id="page-icare" class="page about-page">
@@ -1065,7 +2034,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
         <hr style="border:none;border-top:1px solid rgba(200,155,58,0.2);margin:20px 0">
         <h3>For Vendors</h3>
         <p>IWA members receive special rates as vendors. All vendors are hand-curated by the Bazaar team to ensure quality and diversity.</p>
-        <p style="margin-top:8px"><a href="mailto:bazaar@iwasingapore.org" style="color:#E8670A;font-size:0.85rem;font-weight:600">bazaar@iwasingapore.org &rarr;</a></p>
+        <p style="margin-top:8px"><a href="/cdn-cgi/l/email-protection#abc9cad1cacad9ebc2dccad8c2c5cccadbc4d9ce85c4d9cc" style="color:#E8670A;font-size:0.85rem;font-weight:600"><span class="__cf_email__" data-cfemail="4f2d2e352e2e3d0f26382e3c2621282e3f203d2a61203d28">[email&#160;protected]</span> &rarr;</a></p>
       </div>
     </div>
   </div>
@@ -1092,7 +2061,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
         </div>
         <div style="margin-top:28px;display:flex;gap:16px;flex-wrap:wrap">
           <a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA for Member Rates &rarr;</a>
-          <a href="mailto:privilege@iwasingapore.org" class="btn-outline" style="color:#1C1C1E;border-color:rgba(200,155,58,0.4)">Enquire as Vendor</a>
+          <a href="/cdn-cgi/l/email-protection#ff8f8d968996939a989abf96889e8c9691989e8f908d9ad1908d98" class="btn-outline" style="color:#1C1C1E;border-color:rgba(200,155,58,0.4)">Enquire as Vendor</a>
         </div>
       </div>
       <div>
@@ -1102,7 +2071,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
           <div style="margin-bottom:24px"><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F4A820;margin-bottom:6px">&#128172; Networking</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.6">Connect with fellow entrepreneurs, mentors, and potential collaborators from Singapore&rsquo;s Indian women&rsquo;s community.</div></div>
           <div style="margin-bottom:24px"><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F4A820;margin-bottom:6px">&#127908; Panels &amp; Talks</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.6">Hear from inspiring women business leaders on entrepreneurship, growth, and navigating Singapore&rsquo;s market.</div></div>
           <hr style="border:none;border-top:1px solid rgba(201,151,58,0.2);margin:24px 0">
-          <div style="font-size:0.82rem;color:rgba(255,255,255,0.45)">For vendor &amp; sponsorship enquiries:<br><a href="mailto:privilege@iwasingapore.org" style="color:#F4A820;text-decoration:none">privilege@iwasingapore.org</a></div>
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.45)">For vendor &amp; sponsorship enquiries:<br><a href="/cdn-cgi/l/email-protection#ddadafb4abb4b1b8bab89db4aabcaeb4b3babcadb2afb8f3b2afba" style="color:#F4A820;text-decoration:none"><span class="__cf_email__" data-cfemail="f282809b849b9e979597b29b8593819b9c9593829d8097dc9d8095">[email&#160;protected]</span></a></div>
         </div>
       </div>
     </div>
@@ -1116,7 +2085,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
   </div></div>
   <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
     <div class="priv-note" style="margin-bottom:32px">
-      <strong>How to access your privileges:</strong> Show your IWA digital membership card (available on your member login) at participating Privilege Partner outlets. Privileges are for IWA members only and extend to their spouse and children under 21. For partnership enquiries, email <a href="mailto:privilege@iwasingapore.org" style="color:#E8670A">privilege@iwasingapore.org</a>.
+      <strong>How to access your privileges:</strong> Show your IWA digital membership card (available on your member login) at participating Privilege Partner outlets. Privileges are for IWA members only and extend to their spouse and children under 21. For partnership enquiries, email <a href="/cdn-cgi/l/email-protection#a4d4d6cdd2cdc8c1c3c1e4cdd3c5d7cdcac3c5d4cbd6c18acbd6c3" style="color:#E8670A"><span class="__cf_email__" data-cfemail="1565677c637c79707270557c6274667c7b7274657a67703b7a6772">[email&#160;protected]</span></a>.
     </div>
     <div class="priv-cats">
       <div class="priv-cat active" onclick="filterPrivs('all',this)"><div class="priv-cat-icon">&#10024;</div><div class="priv-cat-name">All Partners</div></div>
@@ -1132,7 +2101,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
     </div>
     <div style="background:#F5EFE6;padding:32px;margin-top:2px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;flex-wrap:wrap">
       <div><strong style="color:#1C1C1E;display:block;margin-bottom:6px">Are you a business owner?</strong><p style="font-size:0.88rem;color:#6B6460;line-height:1.6">Extend your privileges to IWA members and grow your clientele. Email us to explore a Privilege Partnership.</p></div>
-      <a href="mailto:privilege@iwasingapore.org" class="btn-primary" style="white-space:nowrap">Become a Partner &rarr;</a>
+      <a href="/cdn-cgi/l/email-protection#6d1d1f041b0401080a082d041a0c1e04030a0c1d021f0843021f0a" class="btn-primary" style="white-space:nowrap">Become a Partner &rarr;</a>
     </div>
   </div>
 </div>
@@ -1193,7 +2162,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1E;margin-bottom:12px">Ready to join IWA?</h2>
       <p style="font-size:0.92rem;color:#6B6460;max-width:500px;margin:0 auto 28px;line-height:1.7">Use the application form below to apply for new membership or renew your existing membership. Membership runs January&ndash;December.</p>
       <a href="#" class="btn-primary" onclick="openModal();return false;">Open Membership Application Form &rarr;</a>
-      <p style="margin-top:16px;font-size:0.82rem;color:#6B6460">Questions? Email <a href="mailto:membership@iwasingapore.org" style="color:#E8670A">membership@iwasingapore.org</a></p>
+      <p style="margin-top:16px;font-size:0.82rem;color:#6B6460">Questions? Email <a href="/cdn-cgi/l/email-protection#5f323a323d3a2d2c37362f1f36283e2c3631383e2f302d3a71302d38" style="color:#E8670A"><span class="__cf_email__" data-cfemail="432e262e212631302b2a33032a3422302a2d2422332c31266d2c3124">[email&#160;protected]</span></a></p>
     </div>
     <div class="mem-pg-sub" id="ms-faq">
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1E;margin-bottom:32px">Membership <em style="color:#9B1B30">FAQ</em></h2>
@@ -1352,7 +2321,7 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
     </div>
   </div>
 </div>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── SPA ROUTER ──
 var PAGES=['home','about','events','clubs','icare','bazaar','iwapreneurs','privileges','membership'];
 function goTo(page){
@@ -1366,10 +2335,34 @@ function goTo(page){
     var ma=document.getElementById('mob-nav-'+p);
     if(ma) ma.classList.toggle('nav-active',p===page);
   });
+  // Reset clubs view when leaving/entering clubs page
+  if(page==='clubs') backToClubs();
   window.scrollTo({top:0,behavior:'smooth'});
   window.history.pushState({page:page},'','#'+page);
 }
 window.addEventListener('popstate',function(e){goTo(e.state&&e.state.page?e.state.page:'home');});
+
+// ── CLUB DETAIL NAVIGATION ──
+function showClub(clubId){
+  var listing=document.getElementById('clubs-listing');
+  var detail=document.getElementById('clubs-detail');
+  if(listing) listing.style.display='none';
+  if(detail) detail.style.display='block';
+  // Hide all club details, show the chosen one
+  document.querySelectorAll('.club-detail-inner').forEach(function(el){
+    el.style.display='none';
+  });
+  var target=document.getElementById(clubId);
+  if(target) target.style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function backToClubs(){
+  var listing=document.getElementById('clubs-listing');
+  var detail=document.getElementById('clubs-detail');
+  if(listing) listing.style.display='block';
+  if(detail) detail.style.display='none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 
 // ── MOBILE NAV ──
 function toggleMobNav(){
