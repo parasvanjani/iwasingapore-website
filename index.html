@@ -288,6 +288,149 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
 .addr-item-value { font-size:0.9rem; color:white; line-height:1.6; }
 .addr-item-value a { color:rgba(255,255,255,0.7); text-decoration:none; }
 
+
+/* ── MOBILE NAV ── */
+.mob-menu-btn { display:none; background:none; border:none; cursor:pointer; padding:8px; flex-direction:column; gap:5px; }
+.mob-menu-btn span { display:block; width:22px; height:2px; background:#1C1C1E; border-radius:2px; transition:all 0.3s; }
+.mob-nav { display:none; position:fixed; inset:0; z-index:200; background:#FAF7F2; padding:80px 5vw 40px; overflow-y:auto; }
+.mob-nav.open { display:flex; flex-direction:column; gap:4px; }
+.mob-nav-close { position:absolute; top:20px; right:5vw; background:none; border:none; font-size:1.6rem; cursor:pointer; color:#6B6460; }
+.mob-nav a { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; color:#1C1C1E; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(200,155,58,0.2); display:block; }
+.mob-nav a:hover, .mob-nav a.nav-active { color:#E8670A; }
+.mob-nav-cta { margin-top:20px; background:#9B1B30 !important; color:white !important; text-align:center; border:none !important; padding:16px !important; }
+
+/* ── EVENTS PAGE ── */
+.evt-filter-bar { background:white; border-bottom:1px solid rgba(200,155,58,0.2); position:sticky; top:72px; z-index:90; }
+.evt-filter-inner { max-width:1200px; margin:0 auto; padding:0 5vw; display:flex; gap:0; overflow-x:auto; }
+.evt-filter-btn { font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#6B6460; padding:16px 20px; cursor:pointer; border-bottom:3px solid transparent; white-space:nowrap; transition:all 0.2s; background:none; border-top:none; border-left:none; border-right:none; }
+.evt-filter-btn:hover { color:#E8670A; }
+.evt-filter-btn.active { color:#E8670A; border-bottom-color:#E8670A; }
+.evt-page-content { max-width:1200px; margin:0 auto; padding:56px 5vw; }
+.evt-section-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:#1C1C1E; margin-bottom:24px; padding-bottom:12px; border-bottom:2px solid rgba(200,155,58,0.3); }
+.evt-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(200,155,58,0.2); margin-bottom:48px; }
+.evt-card { background:#FAF7F2; padding:28px; transition:background 0.2s; text-decoration:none; display:block; }
+.evt-card:hover { background:white; }
+.evt-card-date { display:flex; gap:12px; align-items:center; margin-bottom:14px; }
+.evt-card-day { font-family:'Cormorant Garamond',serif; font-size:2.4rem; font-weight:300; color:#E8670A; line-height:1; }
+.evt-card-month-year { display:flex; flex-direction:column; }
+.evt-card-month { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#9B1B30; }
+.evt-card-year { font-size:0.72rem; color:#6B6460; }
+.evt-card-name { font-size:0.95rem; font-weight:600; color:#1C1C1E; line-height:1.4; margin-bottom:10px; }
+.evt-card-meta { font-size:0.78rem; color:#6B6460; line-height:1.6; }
+.evt-card-meta-item { display:flex; gap:6px; align-items:baseline; margin-bottom:3px; }
+.evt-card-tag { display:inline-block; font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:3px 8px; background:rgba(232,103,10,0.1); color:#E8670A; margin-top:10px; }
+.evt-card-status { display:inline-block; font-size:0.7rem; font-weight:600; padding:4px 10px; margin-top:8px; margin-left:6px; }
+.evt-card-status.open { background:rgba(13,92,99,0.1); color:#0D5C63; }
+.evt-card-status.waitlist { background:rgba(244,168,32,0.15); color:#C9973A; }
+.evt-past-list { display:flex; flex-direction:column; gap:1px; background:rgba(200,155,58,0.15); }
+.evt-past-row { background:#FAF7F2; display:grid; grid-template-columns:120px 1fr; gap:20px; padding:14px 20px; font-size:0.85rem; transition:background 0.2s; text-decoration:none; color:#1C1C1E; }
+.evt-past-row:hover { background:white; }
+.evt-past-date { color:#6B6460; font-size:0.8rem; }
+.evt-past-name { color:#1C1C1E; }
+.evt-policy-box { background:#F5EFE6; border-left:3px solid #C9973A; padding:20px 24px; margin-top:32px; font-size:0.85rem; color:#6B6460; line-height:1.7; }
+.evt-policy-box strong { color:#1C1C1E; }
+
+/* ── CLUBS PAGE ── */
+.clubs-page-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(200,155,58,0.2); }
+.club-pg-card { background:#FAF7F2; padding:36px 32px; transition:all 0.25s; text-decoration:none; display:block; position:relative; overflow:hidden; }
+.club-pg-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#E8670A,#9B1B30); transform:scaleX(0); transition:transform 0.3s; }
+.club-pg-card:hover { background:white; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
+.club-pg-card:hover::after { transform:scaleX(1); }
+.club-pg-icon { font-size:2.4rem; margin-bottom:14px; }
+.club-pg-name { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:#1C1C1E; margin-bottom:8px; }
+.club-pg-desc { font-size:0.83rem; color:#6B6460; line-height:1.65; }
+.club-pg-link { display:inline-flex; align-items:center; gap:6px; font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#E8670A; margin-top:14px; }
+
+/* ── I-CARE PAGE ── */
+.icare-partner-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; background:rgba(200,155,58,0.2); margin-bottom:48px; }
+.icare-pg-card { background:#FAF7F2; padding:48px 40px; transition:background 0.2s; }
+.icare-pg-card:hover { background:white; }
+.icare-pg-badge { display:inline-block; font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:5px 12px; background:#F5EFE6; color:#E8670A; margin-bottom:16px; }
+.icare-pg-title { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:600; color:#1C1C1E; margin-bottom:12px; line-height:1.2; }
+.icare-pg-desc { font-size:0.88rem; color:#6B6460; line-height:1.7; margin-bottom:16px; }
+.icare-pg-link { display:inline-flex; align-items:center; gap:6px; font-size:0.78rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#E8670A; text-decoration:none; }
+.icare-pg-link:hover { gap:10px; }
+.icare-scholarships { background:linear-gradient(135deg,#1C1C1E 0%,#2A1518 100%); padding:48px; display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+.icare-scholarship { }
+.icare-sch-badge { font-size:0.65rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#F4A820; margin-bottom:10px; }
+.icare-sch-title { font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:600; color:white; margin-bottom:10px; }
+.icare-sch-desc { font-size:0.85rem; color:rgba(255,255,255,0.55); line-height:1.65; }
+.icare-cta-band { background:#F5EFE6; padding:48px; text-align:center; margin-top:2px; }
+.icare-cta-band h3 { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:#1C1C1E; margin-bottom:10px; }
+.icare-cta-band p { font-size:0.9rem; color:#6B6460; margin-bottom:24px; }
+
+/* ── BAZAAR PAGE ── */
+.bazaar-hero-content { max-width:700px; }
+.bazaar-info-grid { display:grid; grid-template-columns:2fr 1fr; gap:2px; background:rgba(200,155,58,0.2); margin-bottom:2px; }
+.bazaar-info-main { background:#FAF7F2; padding:48px; }
+.bazaar-info-side { background:white; padding:40px 32px; }
+.bazaar-info-side h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:#1C1C1E; margin-bottom:16px; }
+.bazaar-info-side p { font-size:0.85rem; color:#6B6460; line-height:1.6; margin-bottom:12px; }
+.bazaar-features { list-style:none; margin-top:20px; }
+.bazaar-features li { font-size:0.88rem; color:#1C1C1E; padding:11px 0; border-bottom:1px solid rgba(200,155,58,0.2); display:flex; gap:12px; line-height:1.5; }
+.bazaar-features li::before { content:'✦'; color:#C9973A; font-size:0.6rem; margin-top:5px; flex-shrink:0; }
+.bazaar-reg-card { background:linear-gradient(160deg,#1C1C1E 0%,#2A1518 100%); padding:40px; margin-bottom:2px; }
+.bazaar-reg-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.6rem; font-weight:300; color:white; margin-bottom:8px; }
+.bazaar-reg-card p { font-size:0.88rem; color:rgba(255,255,255,0.55); margin-bottom:24px; line-height:1.6; }
+
+/* ── IWAPRENEURS PAGE ── */
+.iwaprenuers-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+.iwaprenuers-body { font-size:0.97rem; color:#6B6460; line-height:1.8; }
+.iwaprenuers-body p { margin-bottom:18px; }
+
+/* ── PRIVILEGES PAGE ── */
+.priv-cats { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:rgba(200,155,58,0.2); margin-bottom:2px; }
+.priv-cat { background:#FAF7F2; padding:32px 24px; text-align:center; cursor:pointer; transition:all 0.2s; border-bottom:3px solid transparent; }
+.priv-cat:hover, .priv-cat.active { background:white; border-bottom-color:#E8670A; }
+.priv-cat-icon { font-size:2rem; margin-bottom:10px; }
+.priv-cat-name { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:#1C1C1E; }
+.priv-note { background:#F5EFE6; border-left:3px solid #C9973A; padding:20px 24px; font-size:0.88rem; color:#6B6460; line-height:1.7; }
+.priv-note strong { color:#1C1C1E; }
+.priv-list { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(200,155,58,0.2); margin-top:2px; }
+.priv-card { background:#FAF7F2; padding:28px; }
+.priv-card:hover { background:white; }
+.priv-card-name { font-weight:600; color:#1C1C1E; font-size:0.95rem; margin-bottom:6px; }
+.priv-card-cat { font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#E8670A; margin-bottom:8px; }
+.priv-card-desc { font-size:0.82rem; color:#6B6460; line-height:1.55; }
+
+/* ── MEMBERSHIP PAGE ── */
+.mem-pg-tabs { background:white; border-bottom:1px solid rgba(200,155,58,0.25); position:sticky; top:72px; z-index:90; }
+.mem-pg-tabs-inner { max-width:1200px; margin:0 auto; padding:0 5vw; display:flex; }
+.mem-pg-tab { font-size:0.8rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:#6B6460; padding:18px 24px; cursor:pointer; border-bottom:3px solid transparent; transition:all 0.2s; background:none; border-top:none; border-left:none; border-right:none; }
+.mem-pg-tab:hover { color:#E8670A; }
+.mem-pg-tab.active { color:#E8670A; border-bottom-color:#E8670A; }
+.mem-pg-content { max-width:1200px; margin:0 auto; padding:56px 5vw; }
+.mem-pg-sub { display:none; }
+.mem-pg-sub.active { display:block; }
+.faq-item { border-bottom:1px solid rgba(200,155,58,0.2); }
+.faq-q { width:100%; text-align:left; padding:20px 0; font-size:0.95rem; font-weight:600; color:#1C1C1E; background:none; border:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.faq-q:hover { color:#E8670A; }
+.faq-q .faq-arrow { font-size:0.8rem; color:#C9973A; transition:transform 0.2s; flex-shrink:0; }
+.faq-a { display:none; padding:0 0 20px; font-size:0.88rem; color:#6B6460; line-height:1.75; }
+.faq-item.open .faq-q .faq-arrow { transform:rotate(180deg); }
+.faq-item.open .faq-a { display:block; }
+
+/* ── RESPONSIVE MOBILE OVERRIDES ── */
+@media(max-width:768px){
+  .mob-menu-btn { display:flex; }
+  nav .nav-links { display:none !important; }
+  .evt-cards { grid-template-columns:1fr; }
+  .clubs-page-grid { grid-template-columns:1fr 1fr; }
+  .icare-partner-grid { grid-template-columns:1fr; }
+  .icare-scholarships { grid-template-columns:1fr; }
+  .bazaar-info-grid { grid-template-columns:1fr; }
+  .iwaprenuers-grid { grid-template-columns:1fr; }
+  .priv-cats { grid-template-columns:repeat(2,1fr); }
+  .priv-list { grid-template-columns:1fr; }
+  .about-tabs-inner { overflow-x:auto; }
+  .evt-filter-inner { overflow-x:auto; }
+  .mem-pg-tabs-inner { overflow-x:auto; }
+  .contact-grid { grid-template-columns:1fr; }
+  .contact-address { grid-template-columns:1fr; }
+  .icare-cta-band { padding:32px 24px; }
+  .bazaar-reg-card { padding:28px; }
+}
+
 </style>
 </head>
 <body>
@@ -308,7 +451,23 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
     <li><a href="#" id="nav-membership" onclick="goTo('membership');return false;">Membership</a></li>
     <li><a href="#" class="nav-cta" onclick="openModal();return false;">Join IWA</a></li>
   </ul>
+  <button class="mob-menu-btn" id="mob-btn" onclick="toggleMobNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mob-nav" id="mob-nav">
+  <button class="mob-nav-close" onclick="toggleMobNav()">&#x2715;</button>
+  <a href="#" onclick="goTo('home');toggleMobNav();return false;">Home</a>
+  <a href="#" id="mob-nav-about" onclick="goTo('about');toggleMobNav();return false;">About</a>
+  <a href="#" id="mob-nav-events" onclick="goTo('events');toggleMobNav();return false;">Events</a>
+  <a href="#" id="mob-nav-clubs" onclick="goTo('clubs');toggleMobNav();return false;">Clubs</a>
+  <a href="#" id="mob-nav-icare" onclick="goTo('icare');toggleMobNav();return false;">I-Care</a>
+  <a href="#" id="mob-nav-bazaar" onclick="goTo('bazaar');toggleMobNav();return false;">Bazaar</a>
+  <a href="#" id="mob-nav-iwapreneurs" onclick="goTo('iwapreneurs');toggleMobNav();return false;">IWApreneurs</a>
+  <a href="#" id="mob-nav-privileges" onclick="goTo('privileges');toggleMobNav();return false;">Privileges</a>
+  <a href="#" id="mob-nav-membership" onclick="goTo('membership');toggleMobNav();return false;">Membership</a>
+  <a href="#" class="mob-nav-cta" onclick="openModal();toggleMobNav();return false;">Join IWA &rarr;</a>
+</div>
 <div id="home-content">
 <section class="hero">
   <div class="hero-grid"></div><div class="hero-bg"></div>
@@ -723,32 +882,344 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
 
 <!-- PLACEHOLDER PAGES (to be built next) -->
 <div id="page-events" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Events</span></div><h1 class="page-hero-title"><em>Events</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full events page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Events" target="_blank" class="btn-primary">View Events on Current Site &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>Events</span></div>
+    <h1 class="page-hero-title"><em>Events</em></h1>
+    <p class="page-hero-sub">IWA holds engaging events throughout the year &mdash; cultural, social, I-Care, and club activities open to members and guests.</p>
+  </div></div>
+  <div class="evt-filter-bar"><div class="evt-filter-inner">
+    <button class="evt-filter-btn active" onclick="filterEvts('upcoming',this)">Upcoming</button>
+    <button class="evt-filter-btn" onclick="filterEvts('past',this)">Past Events</button>
+    <button class="evt-filter-btn" onclick="filterEvts('signature',this)">Signature Events</button>
+    <button class="evt-filter-btn" onclick="filterEvts('policy',this)">Policies</button>
+  </div></div>
+  <div class="evt-page-content">
+    <div id="ef-upcoming">
+      <div class="evt-section-title">Upcoming Events</div>
+      <div class="evt-cards">
+        <a href="https://www.iwasingapore.org/event-6605939" target="_blank" class="evt-card">
+          <div class="evt-card-date"><div class="evt-card-day">18</div><div class="evt-card-month-year"><span class="evt-card-month">March</span><span class="evt-card-year">2026</span></div></div>
+          <div class="evt-card-name">IWA SWAMI Home &mdash; Birthday Celebrations</div>
+          <div class="evt-card-meta"><div class="evt-card-meta-item">&#128337; 2:30&ndash;4:00 PM</div><div class="evt-card-meta-item">&#128205; SWAMI Home, 5 Sembawang Walk</div><div class="evt-card-meta-item">25 spaces left</div></div>
+          <span class="evt-card-tag">I-Care</span><span class="evt-card-status open">Register</span>
+        </a>
+        <a href="https://www.iwasingapore.org/event-6593979" target="_blank" class="evt-card">
+          <div class="evt-card-date"><div class="evt-card-day">19</div><div class="evt-card-month-year"><span class="evt-card-month">March</span><span class="evt-card-year">2026</span></div></div>
+          <div class="evt-card-name">Music Club &mdash; &ldquo;Rangon Mein Surmayi Jung&rdquo;</div>
+          <div class="evt-card-meta"><div class="evt-card-meta-item">&#128337; 11:00 AM&ndash;2:00 PM</div><div class="evt-card-meta-item">&#128205; Seafront on Meyer, 55 Meyer Road</div><div class="evt-card-meta-item">Full (25 registered)</div></div>
+          <span class="evt-card-tag">Music Club</span><span class="evt-card-status waitlist">Join Waitlist</span>
+        </a>
+        <a href="https://www.iwasingapore.org/event-6593987" target="_blank" class="evt-card">
+          <div class="evt-card-date"><div class="evt-card-day">20</div><div class="evt-card-month-year"><span class="evt-card-month">March</span><span class="evt-card-year">2026</span></div></div>
+          <div class="evt-card-name">Travel Club &mdash; Geylang Serai Market Tour</div>
+          <div class="evt-card-meta"><div class="evt-card-meta-item">&#128337; 10:00 AM&ndash;12:00 PM</div><div class="evt-card-meta-item">&#128205; 1 Geylang Serai Road</div><div class="evt-card-meta-item">11 spaces left</div></div>
+          <span class="evt-card-tag">Travel Club</span><span class="evt-card-status open">Register</span>
+        </a>
+        <a href="https://www.iwasingapore.org/event-6605953" target="_blank" class="evt-card">
+          <div class="evt-card-date"><div class="evt-card-day">23</div><div class="evt-card-month-year"><span class="evt-card-month">March</span><span class="evt-card-year">2026</span></div></div>
+          <div class="evt-card-name">Health &amp; Fitness Club &mdash; Tai Chi Workshop</div>
+          <div class="evt-card-meta"><div class="evt-card-meta-item">&#128337; 11:00 AM&ndash;12:30 PM</div><div class="evt-card-meta-item">&#128205; Evolution Fitness, ITE College West</div><div class="evt-card-meta-item">Full (15 registered)</div></div>
+          <span class="evt-card-tag">Fitness</span><span class="evt-card-status waitlist">Join Waitlist</span>
+        </a>
+        <a href="https://www.iwasingapore.org/event-6605928" target="_blank" class="evt-card">
+          <div class="evt-card-date"><div class="evt-card-day">18</div><div class="evt-card-month-year"><span class="evt-card-month">April</span><span class="evt-card-year">2026</span></div></div>
+          <div class="evt-card-name">Travel Club &mdash; Trip to Bintan (Overnight)</div>
+          <div class="evt-card-meta"><div class="evt-card-meta-item">&#128337; 8:00 AM &ndash; 19 Apr 12:00 PM</div><div class="evt-card-meta-item">&#128205; Tanah Merah Ferry Terminal</div><div class="evt-card-meta-item">10 spaces left</div></div>
+          <span class="evt-card-tag">Travel Club</span><span class="evt-card-status open">Register</span>
+        </a>
+      </div>
+    </div>
+    <div id="ef-past" style="display:none">
+      <div class="evt-section-title">Past Events</div>
+      <div class="evt-past-list">
+        <a href="https://www.iwasingapore.org/event-6593993" target="_blank" class="evt-past-row"><span class="evt-past-date">Fri 13 Mar 2026</span><span class="evt-past-name">IWA Entrepreneur Club &mdash; One Women Army</span></a>
+        <a href="https://www.iwasingapore.org/event-6582240" target="_blank" class="evt-past-row"><span class="evt-past-date">Thu 12 Mar 2026</span><span class="evt-past-name">IWA TexStyle Club &mdash; Cherished Heirlooms</span></a>
+        <a href="https://www.iwasingapore.org/event-6582562" target="_blank" class="evt-past-row"><span class="evt-past-date">Wed 11 Mar 2026</span><span class="evt-past-name">IWA Book Club &mdash; The Women</span></a>
+        <a href="https://www.iwasingapore.org/event-6582250" target="_blank" class="evt-past-row"><span class="evt-past-date">Tue 10 Mar 2026</span><span class="evt-past-name">IWA Games Club &mdash; Mahjong Masterclass</span></a>
+        <a href="https://www.iwasingapore.org/event-6569206" target="_blank" class="evt-past-row"><span class="evt-past-date">Fri 6 Mar 2026</span><span class="evt-past-name">IWA Movie Club &mdash; HAQ (Netflix 2025)</span></a>
+        <a href="https://www.iwasingapore.org/event-6552472" target="_blank" class="evt-past-row"><span class="evt-past-date">Sun 1 Mar 2026</span><span class="evt-past-name">IWA Holi 2026</span></a>
+        <a href="https://www.iwasingapore.org/event-6550579" target="_blank" class="evt-past-row"><span class="evt-past-date">Tue 24 Feb 2026</span><span class="evt-past-name">IWA AGM 2026</span></a>
+        <a href="https://www.iwasingapore.org/event-6550597" target="_blank" class="evt-past-row"><span class="evt-past-date">Thu 26 Feb 2026</span><span class="evt-past-name">IWA Travel Club &mdash; Trip to Bird Paradise</span></a>
+        <a href="https://www.iwasingapore.org/event-6527207" target="_blank" class="evt-past-row"><span class="evt-past-date">Fri 30 Jan 2026</span><span class="evt-past-name">IWA Entrepreneur Club &mdash; The Art of Effective Communication</span></a>
+        <a href="https://www.iwasingapore.org/event-6514873" target="_blank" class="evt-past-row"><span class="evt-past-date">Sun 25 Jan 2026</span><span class="evt-past-name">IWA Family Club &mdash; Kite Flying at Marina Barrage</span></a>
+        <a href="https://www.iwasingapore.org/event-6500812" target="_blank" class="evt-past-row"><span class="evt-past-date">Wed 21 Jan 2026</span><span class="evt-past-name">IWA GGC &mdash; Street Food from India</span></a>
+        <a href="https://www.iwasingapore.org/event-6458311" target="_blank" class="evt-past-row"><span class="evt-past-date">Thu 15 Jan 2026</span><span class="evt-past-name">IWA Music Club &mdash; Soulful Rhythms</span></a>
+      </div>
+      <div style="text-align:center;margin-top:24px"><a href="https://www.iwasingapore.org/IWA-Events" target="_blank" class="btn-primary">View Full Past Events Archive &rarr;</a></div>
+    </div>
+    <div id="ef-signature" style="display:none">
+      <div class="evt-section-title">Signature IWA Events</div>
+      <div class="evt-cards" style="grid-template-columns:repeat(2,1fr)">
+        <div class="evt-card"><div class="evt-card-name" style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;margin-bottom:10px">&#127774; IWA AGM</div><div class="evt-card-meta" style="color:#6B6460;line-height:1.7">Annual General Meeting held in February/March each year. Members vote on committee positions and review the year&rsquo;s activities and finances.</div></div>
+        <div class="evt-card"><div class="evt-card-name" style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;margin-bottom:10px">&#127829; IWA Members&rsquo; Lunch</div><div class="evt-card-meta" style="color:#6B6460;line-height:1.7">Annual welcome lunch held every March, introducing new members to IWA clubs, events and the wider community.</div></div>
+        <div class="evt-card"><div class="evt-card-name" style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;margin-bottom:10px">&#9728;&#65039; IWA Summer Bazaar</div><div class="evt-card-meta" style="color:#6B6460;line-height:1.7">Mid-year lifestyle showcase featuring curated vendors across fashion, food, wellness and crafts. Open to members and public.</div><a href="https://www.iwasingapore.org/page-1860351" target="_blank" style="display:inline-block;margin-top:12px;font-size:0.78rem;font-weight:600;color:#E8670A;text-decoration:none">Register for Summer Bazaar 2026 &rarr;</a></div>
+        <div class="evt-card"><div class="evt-card-name" style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;margin-bottom:10px">&#127881; IWA Festive Bazaar</div><div class="evt-card-meta" style="color:#6B6460;line-height:1.7">Year-end Diwali and festive season marketplace. A favourite for gifting, fashion and gourmet finds. Proceeds support IWA&rsquo;s charity partners.</div></div>
+        <div class="evt-card"><div class="evt-card-name" style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;margin-bottom:10px">&#128081; IWA Nite / Gala</div><div class="evt-card-meta" style="color:#6B6460;line-height:1.7">IWA&rsquo;s annual gala evening celebrating the community with entertainment, awards and memorable experiences.</div></div>
+        <div class="evt-card"><div class="evt-card-name" style="font-size:1.2rem;font-family:'Cormorant Garamond',serif;margin-bottom:10px">&#128104;&#8205;&#128105;&#8205;&#128102; IWApreneurs</div><div class="evt-card-meta" style="color:#6B6460;line-height:1.7">Annual showcase for women entrepreneurs in Singapore &mdash; pitching, networking, and celebrating women-led businesses.</div></div>
+      </div>
+    </div>
+    <div id="ef-policy" style="display:none">
+      <div class="evt-section-title">Event Policies</div>
+      <div class="evt-policy-box">
+        <p><strong>Guest Policy</strong> &mdash; Some IWA events allow members to register the following family members as guests at member rates: member&rsquo;s spouse, member&rsquo;s children below 21 years old, member&rsquo;s parents / parents-in-law.</p>
+        <br>
+        <p><strong>Cancellation Policy</strong> &mdash; If cancellation is made within 48 hours of the event, charges are non-refundable. For cancellations prior to 48 hours: paid events &mdash; SGD $5 for members, SGD $15 for non-members. Free events &mdash; NIL for members, SGD $10 for non-members.</p>
+        <br>
+        <p><strong>Non-Member Attendance</strong> &mdash; Non-members may attend a maximum of 2 IWA events per year at a minimal charge of SGD $10 per event (pricing may vary by event).</p>
+        <br>
+        <p><strong>Photography Notice</strong> &mdash; Please note that photography and video recording may be made during events for publicity and administrative purposes.</p>
+        <br>
+        <p><strong>Indemnity</strong> &mdash; By signing up for events you accept the <a href="https://www.iwasingapore.org/indemnity-clause" target="_blank" style="color:#E8670A">IWA Indemnity Clause</a>.</p>
+      </div>
+    </div>
+  </div>
 </div>
 <div id="page-clubs" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Clubs</span></div><h1 class="page-hero-title"><em>Clubs</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full clubs page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Clubs" target="_blank" class="btn-primary">View Clubs on Current Site &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>Clubs</span></div>
+    <h1 class="page-hero-title">Interest <em>Clubs</em></h1>
+    <p class="page-hero-sub">15 vibrant clubs spanning arts, culture, wellness, food, travel and enterprise &mdash; there&rsquo;s a home for every passion.</p>
+  </div></div>
+  <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
+    <div class="clubs-page-grid">
+      <a href="https://www.iwasingapore.org/Acts-of-Kindness-(AOK)" target="_blank" class="club-pg-card"><div class="club-pg-icon">💛</div><div class="club-pg-name">Acts of Kindness (AOK)</div><div class="club-pg-desc">The heart of IWA&rsquo;s community spirit. AOK organises charity drives, distribution events, volunteering activities, and initiatives that spread kindness across Singapore.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Adda-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">☕</div><div class="club-pg-name">Adda Club</div><div class="club-pg-desc">A vibrant discussion forum where members gather to debate, reflect and share perspectives on life, relationships, society, and everything in between.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Book-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">📚</div><div class="club-pg-name">Book Club</div><div class="club-pg-desc">Monthly gatherings to discuss great literature spanning Indian fiction, global bestsellers, non-fiction, and everything that sparks a lively conversation.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Creative-Hands-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎨</div><div class="club-pg-name">Creative Hands Club</div><div class="club-pg-desc">A hands-on creative space for art workshops, painting, crafting, and exploring diverse artistic techniques &mdash; from Zentangle to Lippan art.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Entrepreneur-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">💼</div><div class="club-pg-name">Entrepreneur Club</div><div class="club-pg-desc">A platform for women entrepreneurs and aspiring business owners to network, learn, pitch ideas and grow their ventures in Singapore&rsquo;s vibrant ecosystem.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/page-1860340" target="_blank" class="club-pg-card"><div class="club-pg-icon">👨‍👩‍👧</div><div class="club-pg-name">Family Club</div><div class="club-pg-desc">Fun-filled events for the whole family &mdash; beach picnics, holiday celebrations, cultural festivals and activities designed to bring families together.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Games-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎲</div><div class="club-pg-name">Games Club</div><div class="club-pg-desc">From Mahjong to board games, Teen Patti to Scrabble &mdash; a playful club for women who love to play, laugh, and connect over friendly competition.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Gourmet-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🍜</div><div class="club-pg-name">Gourmet Goddess Club</div><div class="club-pg-desc">For the food-passionate &mdash; cooking sessions, restaurant outings, themed food events and culinary explorations celebrating flavours from India and beyond.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Health-&-Fitness-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🧘</div><div class="club-pg-name">Health &amp; Fitness Club</div><div class="club-pg-desc">Zumba, yoga, nature walks, sound healing and wellness talks &mdash; championing holistic health and active lifestyles for IWA members.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Movie-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎬</div><div class="club-pg-name">Movie Club</div><div class="club-pg-desc">Monthly film screenings and discussions spanning Indian cinema, world films, Netflix picks and more &mdash; for the discerning movie lover.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Music-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎵</div><div class="club-pg-name">Music Club</div><div class="club-pg-desc">Celebrating Indian music across all genres &mdash; Bollywood, classical, ghazals, sufi and more. Monthly sessions of singing, listening and musical exploration.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/performing-arts-club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🎭</div><div class="club-pg-name">Performing Arts Club</div><div class="club-pg-desc">Dance, drama, improv and performance workshops. From Garba to stage acting &mdash; a space for every woman who loves to express through the performing arts.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/TexStyle-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">🧵</div><div class="club-pg-name">TexStyle Club</div><div class="club-pg-desc">Saree draping, fabric care, jewellery making, makeup demos and styling workshops &mdash; celebrating Indian fashion and the art of dressing beautifully.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Travel-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">✈️</div><div class="club-pg-name">Travel Club</div><div class="club-pg-desc">Local heritage walks, day trips across Singapore, and regional getaways. Discover Singapore and Southeast Asia with fellow adventurous women.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+      <a href="https://www.iwasingapore.org/Writing-Enthusiasts-Club" target="_blank" class="club-pg-card"><div class="club-pg-icon">✍️</div><div class="club-pg-name">Writing Enthusiasts&rsquo; Club</div><div class="club-pg-desc">Poetry, prose, creative writing workshops and author interactions &mdash; a nurturing space for women who find their voice through the written word.</div><span class="club-pg-link">Learn more &rarr;</span></a>
+    </div>
+    <div style="background:#F5EFE6;padding:32px;margin-top:2px;text-align:center">
+      <p style="font-size:0.9rem;color:#6B6460;margin-bottom:16px">All clubs are open exclusively to IWA members. Events are announced every Wednesday via the weekly e-Newsletter.</p>
+      <a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA to Access All Clubs &rarr;</a>
+    </div>
+  </div>
 </div>
 <div id="page-icare" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>I-Care</span></div><h1 class="page-hero-title"><em>I-Care</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full I-Care page coming soon.</p><a href="https://www.iwasingapore.org/IWA-I-Care" target="_blank" class="btn-primary">View I-Care on Current Site &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>I-Care</span></div>
+    <h1 class="page-hero-title">I-Care: <em>Giving Back</em></h1>
+    <p class="page-hero-sub">I-Care is integral to IWA&rsquo;s identity &mdash; nurturing the spirit of caring, giving, and volunteerism amongst our members since day one.</p>
+  </div></div>
+  <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
+    <div class="icare-partner-grid">
+      <div class="icare-pg-card"><div class="icare-pg-badge">BSS</div><div class="icare-pg-title">Babes Pregnancy Crisis Support</div><div class="icare-pg-desc">BSS supports women in Singapore facing unplanned or crisis pregnancies through counselling, material assistance, and long-term care. IWA volunteers regularly fundraise and participate in BSS initiatives, including the &ldquo;Sew Can We&rdquo; crafting programme and cake sponsorship drives for children in their care.</div><a href="https://www.iwasingapore.org/IWA-BSS" target="_blank" class="icare-pg-link">Learn more &rarr;</a></div>
+      <div class="icare-pg-card"><div class="icare-pg-badge">HOME</div><div class="icare-pg-title">Humanitarian Organisation for Migration Economics</div><div class="icare-pg-desc">HOME supports migrant workers and foreign domestic helpers in Singapore who face exploitation, abuse, or difficult circumstances. IWA members organise regular grocery drives, holiday celebrations, and volunteering sessions to support HOME&rsquo;s shelter residents.</div><a href="https://www.iwasingapore.org/IWA-H.O.M.E" target="_blank" class="icare-pg-link">Learn more &rarr;</a></div>
+      <div class="icare-pg-card"><div class="icare-pg-badge">TWC2</div><div class="icare-pg-title">Transient Workers Count Too</div><div class="icare-pg-desc">TWC2 advocates for the rights and welfare of low-wage migrant workers in Singapore. IWA members attend TWC2 sessions, participate in collection drives, fund movie outings for workers, and celebrate festivals like Holi and New Year with the migrant worker community.</div><a href="https://www.iwasingapore.org/IWA-TWC2" target="_blank" class="icare-pg-link">Learn more &rarr;</a></div>
+      <div class="icare-pg-card"><div class="icare-pg-badge">SWAMI</div><div class="icare-pg-title">SWAMI Home for the Elderly</div><div class="icare-pg-desc">The Sunshine Welfare Action Mission (SWAMI) Home provides residential care for elderly residents. IWA organises regular birthday celebrations, Christmas parties, and festive visits to bring joy and companionship to SWAMI Home residents throughout the year.</div><a href="https://www.iwasingapore.org/IWA-SWAMI-Home" target="_blank" class="icare-pg-link">Learn more &rarr;</a></div>
+    </div>
+    <div class="icare-scholarships">
+      <div class="icare-scholarship"><div class="icare-sch-badge">SMU &middot; Annual Award</div><div class="icare-sch-title">IWA Vidya Scholarship</div><div class="icare-sch-desc">The IWA Vidya Scholarship supports deserving students at Singapore Management University (SMU) with their educational expenses. IWA contributes annually through fundraising at Bazaars and member donations.</div><a href="https://www.iwasingapore.org/IWA-SMU-Vidya-Scholarship" target="_blank" style="display:inline-block;margin-top:14px;font-size:0.78rem;font-weight:600;color:#F4A820;text-decoration:none">Learn more &rarr;</a></div>
+      <div class="icare-scholarship"><div class="icare-sch-badge">SUTD &middot; Annual Award</div><div class="icare-sch-title">Gyan Jyoti Study Award</div><div class="icare-sch-desc">The Gyan Jyoti Study Award supports students at the Singapore University of Technology and Design (SUTD) in technology and design disciplines &mdash; lighting the way for future innovators.</div><a href="https://www.iwasingapore.org/IWA-SUTD-Gyan-Jyoti-Study-Award" target="_blank" style="display:inline-block;margin-top:14px;font-size:0.78rem;font-weight:600;color:#F4A820;text-decoration:none">Learn more &rarr;</a></div>
+    </div>
+    <div class="icare-cta-band">
+      <h3>Volunteer with IWA I-Care</h3>
+      <p>Be part of IWA and join us in giving back to the community. Make a difference &mdash; be part of IWA&rsquo;s vision of Care, Connect and Celebrate.</p>
+      <a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA to Volunteer &rarr;</a>
+    </div>
+  </div>
 </div>
 <div id="page-bazaar" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Bazaar</span></div><h1 class="page-hero-title"><em>Bazaar</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full Bazaar page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Bazaar" target="_blank" class="btn-primary">View Bazaar on Current Site &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>Bazaar</span></div>
+    <div class="bazaar-hero-content">
+      <h1 class="page-hero-title">IWA <em>Bazaar</em></h1>
+      <p class="page-hero-sub">Singapore&rsquo;s favourite Indian lifestyle showcase &mdash; twice a year, featuring carefully curated vendors across fashion, food, wellness, jewellery and crafts.</p>
+    </div>
+  </div></div>
+  <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
+    <div class="bazaar-reg-card" style="margin-bottom:2px">
+      <div style="display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:10px;padding:4px 10px;background:rgba(244,168,32,0.15);">Now Open</div>
+      <h3>IWA Summer Bazaar 2026</h3>
+      <p>Registration is now open for vendors and shoppers. Be part of Singapore&rsquo;s favourite Indian lifestyle marketplace and connect with our vibrant community.</p>
+      <a href="https://www.iwasingapore.org/page-1860351" target="_blank" class="btn-primary">Register as Vendor / Shopper &rarr;</a>
+    </div>
+    <div class="bazaar-info-grid">
+      <div class="bazaar-info-main">
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#E8670A;margin-bottom:16px">About IWA Bazaars</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1E;line-height:1.2;margin-bottom:20px">Two Bazaars.<br>One beloved <em style="color:#9B1B30">community</em>.</h2>
+        <p style="font-size:0.92rem;color:#6B6460;line-height:1.75;margin-bottom:16px">IWA proudly hosts two fundraising Bazaars every calendar year &mdash; the <strong>IWA Summer Bazaar</strong> and the <strong>IWA Festive Bazaar</strong>. These Bazaars offer a platform for member entrepreneurs to showcase their business to the public.</p>
+        <p style="font-size:0.92rem;color:#6B6460;line-height:1.75;margin-bottom:24px">The vendors are carefully curated to bring shoppers a wide range of exclusive products. The IWA Bazaars are well-organised by a dedicated team of volunteers.</p>
+        <p style="font-size:0.92rem;color:#6B6460;line-height:1.75">Proceeds support IWA&rsquo;s charitable activities including contributions to BSS, HOME, TWC2, SWAMI Home, the SMU Vidya Scholarship, the SUTD Gyan Jyoti Study Award, and other ad-hoc charity donations.</p>
+        <ul class="bazaar-features">
+          <li>Fashion, jewellery, food, wellness &amp; lifestyle vendors</li>
+          <li>Carefully curated selection of exclusive products</li>
+          <li>Special member rates for vendors</li>
+          <li>All proceeds support IWA&rsquo;s charity partners</li>
+          <li>Open to members and the general public</li>
+        </ul>
+      </div>
+      <div class="bazaar-info-side">
+        <h3>Bazaar Calendar</h3>
+        <p><strong style="color:#E8670A">Summer Bazaar</strong><br>Held mid-year (typically June/July). Celebrates Indian summer fashion and lifestyle.</p>
+        <p><strong style="color:#E8670A">Festive Bazaar</strong><br>Held at year-end around Diwali season. A favourite for festive gifting and fashion.</p>
+        <hr style="border:none;border-top:1px solid rgba(200,155,58,0.2);margin:20px 0">
+        <h3>For Vendors</h3>
+        <p>IWA members receive special rates as vendors. All vendors are hand-curated by the Bazaar team to ensure quality and diversity.</p>
+        <p style="margin-top:8px"><a href="mailto:bazaar@iwasingapore.org" style="color:#E8670A;font-size:0.85rem;font-weight:600">bazaar@iwasingapore.org &rarr;</a></p>
+      </div>
+    </div>
+  </div>
 </div>
 <div id="page-iwapreneurs" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>IWApreneurs</span></div><h1 class="page-hero-title"><em>IWApreneurs</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full IWApreneurs page coming soon.</p><a href="https://www.iwasingapore.org/IWApreneurs" target="_blank" class="btn-primary">View IWApreneurs on Current Site &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>IWApreneurs</span></div>
+    <h1 class="page-hero-title"><em>IWApreneurs</em></h1>
+    <p class="page-hero-sub">Celebrating and empowering women entrepreneurs in Singapore &mdash; IWA&rsquo;s annual showcase for women-led businesses.</p>
+  </div></div>
+  <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
+    <div class="iwaprenuers-grid">
+      <div>
+        <div style="font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:#E8670A;margin-bottom:16px">What is IWApreneurs?</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:#1C1C1E;line-height:1.15;margin-bottom:24px">Where women&rsquo;s enterprise <em style="color:#9B1B30">takes the stage</em></h2>
+        <div class="iwaprenuers-body">
+          <p>IWApreneurs is IWA Singapore&rsquo;s annual event dedicated to celebrating the entrepreneurial spirit of Indian women in Singapore. It brings together women-led businesses, startups, and side ventures in one vibrant marketplace and networking event.</p>
+          <p>Whether you are a seasoned business owner, a home baker, an artist, a wellness practitioner, or just starting your entrepreneurial journey &mdash; IWApreneurs provides the perfect platform to showcase your work, connect with customers, and grow your network.</p>
+          <p>IWA members receive preferential vendor rates. The event features curated vendors, panel discussions, and networking opportunities with Singapore&rsquo;s women entrepreneurship community.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px">
+          <div style="background:#F5EFE6;padding:24px;border-left:3px solid #E8670A"><div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#E8670A;margin-bottom:6px">Members</div><div style="font-size:0.88rem;color:#6B6460;line-height:1.6">Special vendor rates &amp; priority slots</div></div>
+          <div style="background:#F5EFE6;padding:24px;border-left:3px solid #C9973A"><div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#C9973A;margin-bottom:6px">Non-Members</div><div style="font-size:0.88rem;color:#6B6460;line-height:1.6">Standard vendor rates apply</div></div>
+        </div>
+        <div style="margin-top:28px;display:flex;gap:16px;flex-wrap:wrap">
+          <a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA for Member Rates &rarr;</a>
+          <a href="mailto:privilege@iwasingapore.org" class="btn-outline" style="color:#1C1C1E;border-color:rgba(200,155,58,0.4)">Enquire as Vendor</a>
+        </div>
+      </div>
+      <div>
+        <div style="background:linear-gradient(160deg,#1C1C1E 0%,#2A1518 100%);padding:40px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:#F4A820;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(201,151,58,0.2)">IWApreneurs at a Glance</div>
+          <div style="margin-bottom:24px"><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F4A820;margin-bottom:6px">&#128101; Vendor Showcase</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.6">Curated women-led businesses across fashion, food, beauty, wellness, tech and more.</div></div>
+          <div style="margin-bottom:24px"><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F4A820;margin-bottom:6px">&#128172; Networking</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.6">Connect with fellow entrepreneurs, mentors, and potential collaborators from Singapore&rsquo;s Indian women&rsquo;s community.</div></div>
+          <div style="margin-bottom:24px"><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F4A820;margin-bottom:6px">&#127908; Panels &amp; Talks</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.6">Hear from inspiring women business leaders on entrepreneurship, growth, and navigating Singapore&rsquo;s market.</div></div>
+          <hr style="border:none;border-top:1px solid rgba(201,151,58,0.2);margin:24px 0">
+          <div style="font-size:0.82rem;color:rgba(255,255,255,0.45)">For vendor &amp; sponsorship enquiries:<br><a href="mailto:privilege@iwasingapore.org" style="color:#F4A820;text-decoration:none">privilege@iwasingapore.org</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div id="page-privileges" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Privileges</span></div><h1 class="page-hero-title"><em>Privileges</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Full Privileges page coming soon.</p><a href="https://www.iwasingapore.org/IWA-Privileges" target="_blank" class="btn-primary">View Privileges on Current Site &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>Privileges</span></div>
+    <h1 class="page-hero-title">Member <em>Privileges</em></h1>
+    <p class="page-hero-sub">IWA members enjoy exclusive discounts and benefits with our growing network of Privilege Partners across health, wellness, beauty and dining.</p>
+  </div></div>
+  <div style="max-width:1200px;margin:0 auto;padding:56px 5vw">
+    <div class="priv-note" style="margin-bottom:32px">
+      <strong>How to access your privileges:</strong> Show your IWA digital membership card (available on your member login) at participating Privilege Partner outlets. Privileges are for IWA members only and extend to their spouse and children under 21. For partnership enquiries, email <a href="mailto:privilege@iwasingapore.org" style="color:#E8670A">privilege@iwasingapore.org</a>.
+    </div>
+    <div class="priv-cats">
+      <div class="priv-cat active" onclick="filterPrivs('all',this)"><div class="priv-cat-icon">&#10024;</div><div class="priv-cat-name">All Partners</div></div>
+      <div class="priv-cat" onclick="filterPrivs('health',this)"><div class="priv-cat-icon">&#128138;</div><div class="priv-cat-name">Health</div></div>
+      <div class="priv-cat" onclick="filterPrivs('wellness',this)"><div class="priv-cat-icon">&#127807;</div><div class="priv-cat-name">Ayurveda &amp; Wellness</div></div>
+      <div class="priv-cat" onclick="filterPrivs('jewellery',this)"><div class="priv-cat-icon">&#128141;</div><div class="priv-cat-name">Jewellery</div></div>
+    </div>
+    <div class="priv-list" id="priv-list">
+      <div class="priv-card" data-cat="health"><div class="priv-card-cat">Health</div><div class="priv-card-name">Raffles Hospital</div><div class="priv-card-desc">Discounts on selected specialist consultations and health screenings for IWA members. Periodically hosts health talks for the IWA community.</div></div>
+      <div class="priv-card" data-cat="wellness"><div class="priv-card-cat">Ayurveda &amp; Wellness</div><div class="priv-card-name">Ayurveda Partners</div><div class="priv-card-desc">Exclusive member discounts on Ayurvedic treatments, consultations and wellness packages at IWA&rsquo;s Ayurveda Privilege Partners.</div></div>
+      <div class="priv-card" data-cat="jewellery"><div class="priv-card-cat">Jewellery</div><div class="priv-card-name">Jewellery Partners</div><div class="priv-card-desc">Special member pricing and exclusive preview access at IWA&rsquo;s Jewellery Privilege Partners for Indian and contemporary jewellery.</div></div>
+      <div class="priv-card" data-cat="health"><div class="priv-card-cat">Restaurants</div><div class="priv-card-name">Dining Partners</div><div class="priv-card-desc">Member discounts at selected Singapore restaurants. Check the full list of dining privilege partners on the current IWA website.</div></div>
+    </div>
+    <div style="background:#F5EFE6;padding:32px;margin-top:2px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;flex-wrap:wrap">
+      <div><strong style="color:#1C1C1E;display:block;margin-bottom:6px">Are you a business owner?</strong><p style="font-size:0.88rem;color:#6B6460;line-height:1.6">Extend your privileges to IWA members and grow your clientele. Email us to explore a Privilege Partnership.</p></div>
+      <a href="mailto:privilege@iwasingapore.org" class="btn-primary" style="white-space:nowrap">Become a Partner &rarr;</a>
+    </div>
+  </div>
 </div>
 <div id="page-membership" class="page about-page">
-  <div class="page-hero"><div class="page-hero-inner"><div class="page-breadcrumb">Home &rsaquo; <span>Membership</span></div><h1 class="page-hero-title"><em>Membership</em></h1><p class="page-hero-sub">Coming soon &mdash; this page is being built.</p></div></div>
-  <div style="text-align:center;padding:80px 5vw"><p style="color:#6B6460;margin-bottom:24px">Use the Join IWA button to apply.</p><a href="#" class="btn-primary" onclick="openModal();return false;">Join IWA &rarr;</a></div>
+  <div class="page-hero"><div class="page-hero-inner">
+    <div class="page-breadcrumb">Home &rsaquo; <span>Membership</span></div>
+    <h1 class="page-hero-title">Join <em>IWA</em></h1>
+    <p class="page-hero-sub">Annual membership SGD $120 &middot; January&ndash;December &middot; No auto-renewal &middot; Open to women of Indian origin and all women residing in Singapore.</p>
+  </div></div>
+  <div class="mem-pg-tabs"><div class="mem-pg-tabs-inner">
+    <button class="mem-pg-tab active" onclick="showMemTab('overview',this)">Overview</button>
+    <button class="mem-pg-tab" onclick="showMemTab('apply',this)">Apply / Renew</button>
+    <button class="mem-pg-tab" onclick="showMemTab('faq',this)">FAQ</button>
+    <button class="mem-pg-tab" onclick="showMemTab('benefits',this)">Benefits</button>
+  </div></div>
+  <div class="mem-pg-content">
+    <div class="mem-pg-sub active" id="ms-overview">
+      <div class="mem-cards" style="margin-bottom:32px">
+        <div class="mem-card">
+          <div class="mem-tag">Full Membership</div>
+          <h3 class="mem-title">IWA Full Member</h3>
+          <div class="mem-price">$120 <span style="font-size:1rem;font-family:'DM Sans',sans-serif;color:#6B6460">SGD / year</span></div>
+          <div class="mem-note">January &ndash; December &middot; No auto-renewal</div>
+          <div class="mem-eli">Women of Indian origin, or currently married to a spouse of Indian origin, residing in Singapore. Includes voting rights &amp; eligibility to hold office.</div>
+          <ul class="mem-feats">
+            <li>Access to all 15 Interest Clubs</li>
+            <li>Eligible to vote &amp; hold committee positions</li>
+            <li>Special vendor rates at IWA Bazaars &amp; IWApreneurs</li>
+            <li>Member pricing for ticketed events</li>
+            <li>Welcome Lunch for new members every March</li>
+            <li>Member privileges &amp; partner discounts</li>
+            <li>Weekly e-Newsletter every Wednesday</li>
+          </ul>
+          <a href="#" class="btn-primary" onclick="openModal('full');return false;">Apply as Full Member</a>
+        </div>
+        <div class="mem-card dark">
+          <div class="mem-tag">Associate Membership</div>
+          <h3 class="mem-title">IWA Associate Member</h3>
+          <div class="mem-price">$120 <span style="font-size:1rem;font-family:'DM Sans',sans-serif;color:rgba(255,255,255,0.4)">SGD / year</span></div>
+          <div class="mem-note">January &ndash; December &middot; No auto-renewal</div>
+          <div class="mem-eli">Women residing in Singapore where both applicant and spouse are of non-Indian origin. All member benefits except voting &amp; office-holding.</div>
+          <ul class="mem-feats">
+            <li>Access to all 15 Interest Clubs</li>
+            <li>All privileges (except voting &amp; office-holding)</li>
+            <li>Special vendor rates at Bazaars &amp; IWApreneurs</li>
+            <li>Member pricing for ticketed events</li>
+            <li>I-Care volunteering opportunities</li>
+            <li>Welcome Lunch every March</li>
+            <li>Weekly e-Newsletter every Wednesday</li>
+          </ul>
+          <a href="#" class="btn-primary" onclick="openModal('assoc');return false;">Apply as Associate</a>
+        </div>
+      </div>
+      <div style="text-align:center;padding:20px 0;font-size:0.85rem;color:#6B6460">Membership benefits extend to the member&rsquo;s spouse and children under 21. &middot; Non-members may attend up to 2 events/year at SGD $10/event.</div>
+    </div>
+    <div class="mem-pg-sub" id="ms-apply" style="text-align:center;padding:48px 0">
+      <div style="font-size:3rem;margin-bottom:16px">🪷</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1E;margin-bottom:12px">Ready to join IWA?</h2>
+      <p style="font-size:0.92rem;color:#6B6460;max-width:500px;margin:0 auto 28px;line-height:1.7">Use the application form below to apply for new membership or renew your existing membership. Membership runs January&ndash;December.</p>
+      <a href="#" class="btn-primary" onclick="openModal();return false;">Open Membership Application Form &rarr;</a>
+      <p style="margin-top:16px;font-size:0.82rem;color:#6B6460">Questions? Email <a href="mailto:membership@iwasingapore.org" style="color:#E8670A">membership@iwasingapore.org</a></p>
+    </div>
+    <div class="mem-pg-sub" id="ms-faq">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1E;margin-bottom:32px">Membership <em style="color:#9B1B30">FAQ</em></h2>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Who can join IWA?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">Women residing in Singapore over 18 years of age can join. Full Membership is for women of Indian origin or married to men of Indian origin. Associate Membership is open to all other women residing in Singapore.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the membership fee?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">Annual membership is SGD $120 per year for both Full and Associate members. Membership runs from January to December of the current year. The fee is the same regardless of which month you join.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What are the payment options?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">You can pay via PayPal or credit card online, via PayNow (UEN: S97SS0085J &mdash; include your name as reference), or by cheque mailed to P.O. Box 472, Orchard Post Office, Singapore 912316. Cash payments are not accepted.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How long does activation take?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">Online PayPal/credit card payments: activated within 1 week. PayNow: activated within 1 week after payment is matched. Cheque: activated after encashment, typically 4 weeks.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is the membership fee refundable?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">No. Membership fees are non-refundable and non-transferable.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do I need to re-fill the form when renewing?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">Existing members do not need to fill the form again. Simply log in, click Renewal, verify your details, and proceed to pay. New members must complete the full application form.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is Associate Membership?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">Associate Membership is open to women residing in Singapore who are neither of Indian origin nor married to men of Indian origin. Associate Members enjoy all member privileges except the right to vote or hold office in IWA.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Am I issued a membership card?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">In the interest of going green, IWA does not print membership cards. You will have an e-card available on your membership login as your identifier. Show a screenshot at Privilege Partner outlets.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can non-members attend IWA events?<span class="faq-arrow">&#9660;</span></button><div class="faq-a">Non-members may attend a maximum of 2 IWA events per year at SGD $10 per event (price may vary). Members-only events require an activated membership.</div></div>
+    </div>
+    <div class="mem-pg-sub" id="ms-benefits">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#1C1C1E;margin-bottom:8px">Why Become an <em style="color:#9B1B30">IWA Member?</em></h2>
+      <p style="font-size:0.95rem;color:#6B6460;line-height:1.7;margin-bottom:36px;max-width:600px">IWA provides a great platform to make new friends, build a network, integrate into Singapore&rsquo;s community, and contribute meaningfully to society.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(200,155,58,0.2)">
+        <div style="background:#FAF7F2;padding:32px"><div style="font-size:1.8rem;margin-bottom:12px">🎪</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin-bottom:8px">15 Interest Clubs</div><div style="font-size:0.84rem;color:#6B6460;line-height:1.6">Access to all IWA clubs &mdash; arts, fitness, travel, food, books and more.</div></div>
+        <div style="background:#FAF7F2;padding:32px"><div style="font-size:1.8rem;margin-bottom:12px">🛍️</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin-bottom:8px">Bazaar &amp; IWApreneurs</div><div style="font-size:0.84rem;color:#6B6460;line-height:1.6">Special member vendor rates at both annual Bazaars and IWApreneurs.</div></div>
+        <div style="background:#FAF7F2;padding:32px"><div style="font-size:1.8rem;margin-bottom:12px">💌</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin-bottom:8px">Weekly Newsletter</div><div style="font-size:0.84rem;color:#6B6460;line-height:1.6">Stay informed with the IWA e-Newsletter sent every Wednesday.</div></div>
+        <div style="background:#FAF7F2;padding:32px"><div style="font-size:1.8rem;margin-bottom:12px">🤝</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin-bottom:8px">I-Care Volunteering</div><div style="font-size:0.84rem;color:#6B6460;line-height:1.6">Participate in IWA&rsquo;s I-Care community service programs.</div></div>
+        <div style="background:#FAF7F2;padding:32px"><div style="font-size:1.8rem;margin-bottom:12px">🎁</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin-bottom:8px">Member Privileges</div><div style="font-size:0.84rem;color:#6B6460;line-height:1.6">Discounts at IWA Privilege Partner outlets across health, wellness &amp; dining.</div></div>
+        <div style="background:#FAF7F2;padding:32px"><div style="font-size:1.8rem;margin-bottom:12px">🌸</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:#1C1C1E;margin-bottom:8px">Welcome Lunch</div><div style="font-size:0.84rem;color:#6B6460;line-height:1.6">New members are welcomed at the annual Members&rsquo; Lunch held every March.</div></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- MEMBERSHIP MODAL -->
@@ -882,31 +1353,77 @@ hr.div { border:none; border-top:1px solid rgba(200,155,58,0.2); margin:24px 0; 
   </div>
 </div>
 <script>
-// SPA ROUTER
-const PAGES=['home','about','events','clubs','icare','bazaar','iwapreneurs','privileges','membership'];
+// ── SPA ROUTER ──
+var PAGES=['home','about','events','clubs','icare','bazaar','iwapreneurs','privileges','membership'];
 function goTo(page){
-  const hc=document.getElementById('home-content');
+  var hc=document.getElementById('home-content');
   if(hc) hc.style.display=page==='home'?'block':'none';
-  PAGES.forEach(p=>{
-    const el=document.getElementById('page-'+p);
+  PAGES.forEach(function(p){
+    var el=document.getElementById('page-'+p);
     if(el) el.classList.toggle('active',p===page);
-    const a=document.getElementById('nav-'+p);
+    var a=document.getElementById('nav-'+p);
     if(a) a.classList.toggle('nav-active',p===page);
+    var ma=document.getElementById('mob-nav-'+p);
+    if(ma) ma.classList.toggle('nav-active',p===page);
   });
   window.scrollTo({top:0,behavior:'smooth'});
-  window.history.pushState({page},'','#'+page);
+  window.history.pushState({page:page},'','#'+page);
 }
-window.addEventListener('popstate',e=>goTo(e.state&&e.state.page?e.state.page:'home'));
+window.addEventListener('popstate',function(e){goTo(e.state&&e.state.page?e.state.page:'home');});
 
-// ABOUT TABS
+// ── MOBILE NAV ──
+function toggleMobNav(){
+  var mn=document.getElementById('mob-nav');
+  mn.classList.toggle('open');
+  document.body.style.overflow=mn.classList.contains('open')?'hidden':'';
+}
+
+// ── ABOUT TABS ──
 function showAboutTab(tab){
-  ['overview','history','presidents','contact'].forEach(t=>{
+  ['overview','history','presidents','contact'].forEach(function(t){
     document.getElementById('sub-'+t).classList.toggle('active',t===tab);
     document.getElementById('tab-'+t).classList.toggle('active',t===tab);
   });
 }
 
-// MODAL
+// ── EVENT FILTERS ──
+function filterEvts(f,btn){
+  ['upcoming','past','signature','policy'].forEach(function(x){
+    var el=document.getElementById('ef-'+x);
+    if(el) el.style.display=x===f?'block':'none';
+  });
+  document.querySelectorAll('.evt-filter-btn').forEach(function(b){b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+}
+
+// ── PRIVILEGE FILTER ──
+function filterPrivs(cat,btn){
+  document.querySelectorAll('.priv-card').forEach(function(c){
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none';
+  });
+  document.querySelectorAll('.priv-cat').forEach(function(b){b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+}
+
+// ── MEMBERSHIP PAGE TABS ──
+function showMemTab(tab,btn){
+  ['overview','apply','faq','benefits'].forEach(function(t){
+    var el=document.getElementById('ms-'+t);
+    if(el) el.classList.toggle('active',t===tab);
+  });
+  document.querySelectorAll('.mem-pg-tab').forEach(function(b){b.classList.remove('active');});
+  if(btn) btn.classList.add('active');
+}
+
+// ── FAQ ACCORDION ──
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var wasOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!wasOpen) item.classList.add('open');
+}
+
+// ── MODAL ──
 function openModal(t){
   document.getElementById('modal').classList.add('open');
   document.body.style.overflow='hidden';
@@ -918,15 +1435,15 @@ function closeModal(){
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 
-// MEMBERSHIP FORM
+// ── MEMBERSHIP FORM ──
 function selTier(t){
   document.getElementById('t-full').className='tier-opt'+(t==='full'?' sel':'');
   document.getElementById('t-assoc').className='tier-opt'+(t==='assoc'?' sel':'');
 }
 function selPay(p){
-  ['online','paynow','cheque'].forEach(x=>document.getElementById('p-'+x).className='pay-opt'+(p===x?' sel':''));
+  ['online','paynow','cheque'].forEach(function(x){document.getElementById('p-'+x).className='pay-opt'+(p===x?' sel':'');});
   document.getElementById('pi-paynow').style.display=p==='paynow'?'block':'none';
   document.getElementById('pi-cheque').style.display=p==='cheque'?'block':'none';
 }
@@ -949,7 +1466,7 @@ function doSubmit(){
   document.getElementById('mf-success').style.display='block';
 }
 
-// SCROLL REVEAL
+// ── SCROLL REVEAL ──
 var obs=new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
